@@ -24,7 +24,11 @@ add_executable(${PROJECT_NAME}
         "${PROJECT_SOURCE_DIR}/Source file/VAO.cpp"
         "${PROJECT_SOURCE_DIR}/Source file/VBO.cpp"
         "${PROJECT_SOURCE_DIR}/Source file/Shader.cpp"
-        "Source file/stb_image.cpp"  # ¡Agrega Shader.cpp aquí!
+        "Source file/stb_image.cpp"
+        Volcano.cpp
+        Volcano.h
+        Crater.cpp
+        Crater.h  # ¡Agrega Shader.cpp aquí!
 )
 
 # Enlazar bibliotecas

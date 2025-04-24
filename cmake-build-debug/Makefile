@@ -128,6 +128,30 @@ volcania/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\volcania.dir\build.make CMakeFiles/volcania.dir/build
 .PHONY : volcania/fast
 
+Crater.obj: Crater.cpp.obj
+.PHONY : Crater.obj
+
+# target to build an object file
+Crater.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\volcania.dir\build.make CMakeFiles/volcania.dir/Crater.cpp.obj
+.PHONY : Crater.cpp.obj
+
+Crater.i: Crater.cpp.i
+.PHONY : Crater.i
+
+# target to preprocess a source file
+Crater.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\volcania.dir\build.make CMakeFiles/volcania.dir/Crater.cpp.i
+.PHONY : Crater.cpp.i
+
+Crater.s: Crater.cpp.s
+.PHONY : Crater.s
+
+# target to generate assembly for a file
+Crater.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\volcania.dir\build.make CMakeFiles/volcania.dir/Crater.cpp.s
+.PHONY : Crater.cpp.s
+
 Source_file/EBO.obj: Source_file/EBO.cpp.obj
 .PHONY : Source_file/EBO.obj
 
@@ -272,6 +296,30 @@ Source_file/stb_image.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\volcania.dir\build.make CMakeFiles/volcania.dir/Source_file/stb_image.cpp.s
 .PHONY : Source_file/stb_image.cpp.s
 
+Volcano.obj: Volcano.cpp.obj
+.PHONY : Volcano.obj
+
+# target to build an object file
+Volcano.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\volcania.dir\build.make CMakeFiles/volcania.dir/Volcano.cpp.obj
+.PHONY : Volcano.cpp.obj
+
+Volcano.i: Volcano.cpp.i
+.PHONY : Volcano.i
+
+# target to preprocess a source file
+Volcano.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\volcania.dir\build.make CMakeFiles/volcania.dir/Volcano.cpp.i
+.PHONY : Volcano.cpp.i
+
+Volcano.s: Volcano.cpp.s
+.PHONY : Volcano.s
+
+# target to generate assembly for a file
+Volcano.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\volcania.dir\build.make CMakeFiles/volcania.dir/Volcano.cpp.s
+.PHONY : Volcano.cpp.s
+
 main.obj: main.cpp.obj
 .PHONY : main.obj
 
@@ -305,6 +353,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... volcania
+	@echo ... Crater.obj
+	@echo ... Crater.i
+	@echo ... Crater.s
 	@echo ... Source_file/EBO.obj
 	@echo ... Source_file/EBO.i
 	@echo ... Source_file/EBO.s
@@ -323,6 +374,9 @@ help:
 	@echo ... Source_file/stb_image.obj
 	@echo ... Source_file/stb_image.i
 	@echo ... Source_file/stb_image.s
+	@echo ... Volcano.obj
+	@echo ... Volcano.i
+	@echo ... Volcano.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

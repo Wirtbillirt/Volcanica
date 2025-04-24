@@ -173,6 +173,36 @@ CMakeFiles/volcania.dir/Source_file/stb_image.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/volcania.dir/Source_file/stb_image.cpp.s"
 	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\wirtb\CLionProjects\volcania\Source file\stb_image.cpp" -o CMakeFiles\volcania.dir\Source_file\stb_image.cpp.s
 
+CMakeFiles/volcania.dir/Volcano.cpp.obj: CMakeFiles/volcania.dir/flags.make
+CMakeFiles/volcania.dir/Volcano.cpp.obj: CMakeFiles/volcania.dir/includes_CXX.rsp
+CMakeFiles/volcania.dir/Volcano.cpp.obj: C:/Users/wirtb/CLionProjects/volcania/Volcano.cpp
+CMakeFiles/volcania.dir/Volcano.cpp.obj: CMakeFiles/volcania.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\wirtb\CLionProjects\volcania\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/volcania.dir/Volcano.cpp.obj"
+	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/volcania.dir/Volcano.cpp.obj -MF CMakeFiles\volcania.dir\Volcano.cpp.obj.d -o CMakeFiles\volcania.dir\Volcano.cpp.obj -c C:\Users\wirtb\CLionProjects\volcania\Volcano.cpp
+
+CMakeFiles/volcania.dir/Volcano.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/volcania.dir/Volcano.cpp.i"
+	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\wirtb\CLionProjects\volcania\Volcano.cpp > CMakeFiles\volcania.dir\Volcano.cpp.i
+
+CMakeFiles/volcania.dir/Volcano.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/volcania.dir/Volcano.cpp.s"
+	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\wirtb\CLionProjects\volcania\Volcano.cpp -o CMakeFiles\volcania.dir\Volcano.cpp.s
+
+CMakeFiles/volcania.dir/Crater.cpp.obj: CMakeFiles/volcania.dir/flags.make
+CMakeFiles/volcania.dir/Crater.cpp.obj: CMakeFiles/volcania.dir/includes_CXX.rsp
+CMakeFiles/volcania.dir/Crater.cpp.obj: C:/Users/wirtb/CLionProjects/volcania/Crater.cpp
+CMakeFiles/volcania.dir/Crater.cpp.obj: CMakeFiles/volcania.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\wirtb\CLionProjects\volcania\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/volcania.dir/Crater.cpp.obj"
+	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/volcania.dir/Crater.cpp.obj -MF CMakeFiles\volcania.dir\Crater.cpp.obj.d -o CMakeFiles\volcania.dir\Crater.cpp.obj -c C:\Users\wirtb\CLionProjects\volcania\Crater.cpp
+
+CMakeFiles/volcania.dir/Crater.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/volcania.dir/Crater.cpp.i"
+	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\wirtb\CLionProjects\volcania\Crater.cpp > CMakeFiles\volcania.dir\Crater.cpp.i
+
+CMakeFiles/volcania.dir/Crater.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/volcania.dir/Crater.cpp.s"
+	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\wirtb\CLionProjects\volcania\Crater.cpp -o CMakeFiles\volcania.dir\Crater.cpp.s
+
 # Object files for target volcania
 volcania_OBJECTS = \
 "CMakeFiles/volcania.dir/main.cpp.obj" \
@@ -181,7 +211,9 @@ volcania_OBJECTS = \
 "CMakeFiles/volcania.dir/Source_file/VAO.cpp.obj" \
 "CMakeFiles/volcania.dir/Source_file/VBO.cpp.obj" \
 "CMakeFiles/volcania.dir/Source_file/Shader.cpp.obj" \
-"CMakeFiles/volcania.dir/Source_file/stb_image.cpp.obj"
+"CMakeFiles/volcania.dir/Source_file/stb_image.cpp.obj" \
+"CMakeFiles/volcania.dir/Volcano.cpp.obj" \
+"CMakeFiles/volcania.dir/Crater.cpp.obj"
 
 # External object files for target volcania
 volcania_EXTERNAL_OBJECTS =
@@ -193,11 +225,13 @@ volcania.exe: CMakeFiles/volcania.dir/Source_file/VAO.cpp.obj
 volcania.exe: CMakeFiles/volcania.dir/Source_file/VBO.cpp.obj
 volcania.exe: CMakeFiles/volcania.dir/Source_file/Shader.cpp.obj
 volcania.exe: CMakeFiles/volcania.dir/Source_file/stb_image.cpp.obj
+volcania.exe: CMakeFiles/volcania.dir/Volcano.cpp.obj
+volcania.exe: CMakeFiles/volcania.dir/Crater.cpp.obj
 volcania.exe: CMakeFiles/volcania.dir/build.make
 volcania.exe: CMakeFiles/volcania.dir/linkLibs.rsp
 volcania.exe: CMakeFiles/volcania.dir/objects1.rsp
 volcania.exe: CMakeFiles/volcania.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\wirtb\CLionProjects\volcania\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable volcania.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\wirtb\CLionProjects\volcania\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable volcania.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\volcania.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
