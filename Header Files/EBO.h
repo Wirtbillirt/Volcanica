@@ -1,21 +1,18 @@
-#ifndef EBO_CLASS_H
-#define EBO_CLASS_H
+#ifndef EBO_H
+#define EBO_H
 
-#include<glad/glad.h>
+#include <glad/glad.h>
+#include <vector>
 
-class EBO
-{
-
+class EBO {
 public:
     GLuint ID;
-    EBO(GLuint* indices, GLsizeiptr size);
 
+    EBO();  // Constructor vacío
+    void Data(void* indices, GLsizeiptr size);  // Método para enviar datos
     void Bind();
     void Unbind();
     void Delete();
 };
 
-
-
-
-#endif // ! VBO_CLASS_H
+#endif

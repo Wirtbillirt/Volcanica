@@ -3,36 +3,54 @@ project(volcania)
 
 set(CMAKE_CXX_STANDARD 20)
 
-# Configurar GLFW
-find_package(PkgConfig REQUIRED)
-pkg_check_modules(GLFW REQUIRED glfw3)
+# Dependencias
+find_package(glfw3 REQUIRED)
+find_package(assimp REQUIRED)
+find_package(glm REQUIRED)
 
-# Incluir directorios de headers
+# Configurar rutas de inclusión
 include_directories(
         ${GLFW_INCLUDE_DIRS}
-        "${PROJECT_SOURCE_DIR}/Header Files"            # Para VAO.h, EBO.h, Shader.h
-        "${PROJECT_SOURCE_DIR}/Source file"             # Para stb_image.h (si está aquí)
+        ${assimp_INCLUDE_DIRS}
+        ${glm_INCLUDE_DIRS}
+        "${PROJECT_SOURCE_DIR}/Header Files"
+        "${PROJECT_SOURCE_DIR}/Source file"
         "${PROJECT_SOURCE_DIR}/Source file/glad/include"
-        "cmake-build-debug/Resource Files/Shaders"
 )
 
-# Agregar TODOS los archivos fuente (CORREGIDO)
-add_executable(${PROJECT_NAME}
-        main.cpp
-        "${PROJECT_SOURCE_DIR}/Source file/glad/src/glad.c"
-        "${PROJECT_SOURCE_DIR}/Source file/EBO.cpp"
+# Lista explícita de archivos fuente (evitar GLOB)
+set(SOURCE_FILES
+        "${PROJECT_SOURCE_DIR}/Source file/main.cpp"
+        "${PROJECT_SOURCE_DIR}/Source file/Shader.cpp"
+        "${PROJECT_SOURCE_DIR}/Source file/Model.cpp"
+        "${PROJECT_SOURCE_DIR}/Source file/Mesh.cpp"
         "${PROJECT_SOURCE_DIR}/Source file/VAO.cpp"
         "${PROJECT_SOURCE_DIR}/Source file/VBO.cpp"
-        "${PROJECT_SOURCE_DIR}/Source file/Shader.cpp"
-        "Source file/stb_image.cpp"
-        Volcano.cpp
-        Volcano.h
-        Crater.cpp
-        Crater.h  # ¡Agrega Shader.cpp aquí!
+        "${PROJECT_SOURCE_DIR}/Source file/EBO.cpp"
+        "${PROJECT_SOURCE_DIR}/Source file/glad/src/glad.c"
+)
+
+add_executable(${PROJECT_NAME}
+        ${SOURCE_FILES}
 )
 
 # Enlazar bibliotecas
 target_link_libraries(${PROJECT_NAME}
-        ${GLFW_LIBRARIES}
+        glfw
+        assimp::assimp
         opengl32
+        glm::glm
+)
+
+# Copiar recursos al ejecutable
+add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD
+        COMMAND ${CMAKE_COMMAND} -E copy_directory
+        "${PROJECT_SOURCE_DIR}/models"
+        "$<TARGET_FILE_DIR:${PROJECT_NAME}>/models"
+)
+
+add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD
+        COMMAND ${CMAKE_COMMAND} -E copy_directory
+        "${PROJECT_SOURCE_DIR}/shaders"
+        "$<TARGET_FILE_DIR:${PROJECT_NAME}>/shaders"
 )

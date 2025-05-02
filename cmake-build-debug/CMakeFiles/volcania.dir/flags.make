@@ -3,13 +3,13 @@
 
 # compile C with C:/msys64/mingw64/bin/gcc.exe
 # compile CXX with C:/msys64/mingw64/bin/g++.exe
-C_DEFINES = 
+C_DEFINES = -DGLFW_DLL
 
 C_INCLUDES = @CMakeFiles/volcania.dir/includes_C.rsp
 
 C_FLAGS = -g -fdiagnostics-color=always
 
-CXX_DEFINES = 
+CXX_DEFINES = -DGLFW_DLL
 
 CXX_INCLUDES = @CMakeFiles/volcania.dir/includes_CXX.rsp
 

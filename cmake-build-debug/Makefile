@@ -128,30 +128,6 @@ volcania/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\volcania.dir\build.make CMakeFiles/volcania.dir/build
 .PHONY : volcania/fast
 
-Crater.obj: Crater.cpp.obj
-.PHONY : Crater.obj
-
-# target to build an object file
-Crater.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\volcania.dir\build.make CMakeFiles/volcania.dir/Crater.cpp.obj
-.PHONY : Crater.cpp.obj
-
-Crater.i: Crater.cpp.i
-.PHONY : Crater.i
-
-# target to preprocess a source file
-Crater.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\volcania.dir\build.make CMakeFiles/volcania.dir/Crater.cpp.i
-.PHONY : Crater.cpp.i
-
-Crater.s: Crater.cpp.s
-.PHONY : Crater.s
-
-# target to generate assembly for a file
-Crater.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\volcania.dir\build.make CMakeFiles/volcania.dir/Crater.cpp.s
-.PHONY : Crater.cpp.s
-
 Source_file/EBO.obj: Source_file/EBO.cpp.obj
 .PHONY : Source_file/EBO.obj
 
@@ -199,6 +175,54 @@ Source_file/Glad/src/glad.s: Source_file/Glad/src/glad.c.s
 Source_file/Glad/src/glad.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\volcania.dir\build.make CMakeFiles/volcania.dir/Source_file/Glad/src/glad.c.s
 .PHONY : Source_file/Glad/src/glad.c.s
+
+Source_file/Mesh.obj: Source_file/Mesh.cpp.obj
+.PHONY : Source_file/Mesh.obj
+
+# target to build an object file
+Source_file/Mesh.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\volcania.dir\build.make CMakeFiles/volcania.dir/Source_file/Mesh.cpp.obj
+.PHONY : Source_file/Mesh.cpp.obj
+
+Source_file/Mesh.i: Source_file/Mesh.cpp.i
+.PHONY : Source_file/Mesh.i
+
+# target to preprocess a source file
+Source_file/Mesh.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\volcania.dir\build.make CMakeFiles/volcania.dir/Source_file/Mesh.cpp.i
+.PHONY : Source_file/Mesh.cpp.i
+
+Source_file/Mesh.s: Source_file/Mesh.cpp.s
+.PHONY : Source_file/Mesh.s
+
+# target to generate assembly for a file
+Source_file/Mesh.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\volcania.dir\build.make CMakeFiles/volcania.dir/Source_file/Mesh.cpp.s
+.PHONY : Source_file/Mesh.cpp.s
+
+Source_file/Model.obj: Source_file/Model.cpp.obj
+.PHONY : Source_file/Model.obj
+
+# target to build an object file
+Source_file/Model.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\volcania.dir\build.make CMakeFiles/volcania.dir/Source_file/Model.cpp.obj
+.PHONY : Source_file/Model.cpp.obj
+
+Source_file/Model.i: Source_file/Model.cpp.i
+.PHONY : Source_file/Model.i
+
+# target to preprocess a source file
+Source_file/Model.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\volcania.dir\build.make CMakeFiles/volcania.dir/Source_file/Model.cpp.i
+.PHONY : Source_file/Model.cpp.i
+
+Source_file/Model.s: Source_file/Model.cpp.s
+.PHONY : Source_file/Model.s
+
+# target to generate assembly for a file
+Source_file/Model.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\volcania.dir\build.make CMakeFiles/volcania.dir/Source_file/Model.cpp.s
+.PHONY : Source_file/Model.cpp.s
 
 Source_file/Shader.obj: Source_file/Shader.cpp.obj
 .PHONY : Source_file/Shader.obj
@@ -272,77 +296,29 @@ Source_file/VBO.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\volcania.dir\build.make CMakeFiles/volcania.dir/Source_file/VBO.cpp.s
 .PHONY : Source_file/VBO.cpp.s
 
-Source_file/stb_image.obj: Source_file/stb_image.cpp.obj
-.PHONY : Source_file/stb_image.obj
+Source_file/main.obj: Source_file/main.cpp.obj
+.PHONY : Source_file/main.obj
 
 # target to build an object file
-Source_file/stb_image.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\volcania.dir\build.make CMakeFiles/volcania.dir/Source_file/stb_image.cpp.obj
-.PHONY : Source_file/stb_image.cpp.obj
+Source_file/main.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\volcania.dir\build.make CMakeFiles/volcania.dir/Source_file/main.cpp.obj
+.PHONY : Source_file/main.cpp.obj
 
-Source_file/stb_image.i: Source_file/stb_image.cpp.i
-.PHONY : Source_file/stb_image.i
-
-# target to preprocess a source file
-Source_file/stb_image.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\volcania.dir\build.make CMakeFiles/volcania.dir/Source_file/stb_image.cpp.i
-.PHONY : Source_file/stb_image.cpp.i
-
-Source_file/stb_image.s: Source_file/stb_image.cpp.s
-.PHONY : Source_file/stb_image.s
-
-# target to generate assembly for a file
-Source_file/stb_image.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\volcania.dir\build.make CMakeFiles/volcania.dir/Source_file/stb_image.cpp.s
-.PHONY : Source_file/stb_image.cpp.s
-
-Volcano.obj: Volcano.cpp.obj
-.PHONY : Volcano.obj
-
-# target to build an object file
-Volcano.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\volcania.dir\build.make CMakeFiles/volcania.dir/Volcano.cpp.obj
-.PHONY : Volcano.cpp.obj
-
-Volcano.i: Volcano.cpp.i
-.PHONY : Volcano.i
+Source_file/main.i: Source_file/main.cpp.i
+.PHONY : Source_file/main.i
 
 # target to preprocess a source file
-Volcano.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\volcania.dir\build.make CMakeFiles/volcania.dir/Volcano.cpp.i
-.PHONY : Volcano.cpp.i
+Source_file/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\volcania.dir\build.make CMakeFiles/volcania.dir/Source_file/main.cpp.i
+.PHONY : Source_file/main.cpp.i
 
-Volcano.s: Volcano.cpp.s
-.PHONY : Volcano.s
-
-# target to generate assembly for a file
-Volcano.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\volcania.dir\build.make CMakeFiles/volcania.dir/Volcano.cpp.s
-.PHONY : Volcano.cpp.s
-
-main.obj: main.cpp.obj
-.PHONY : main.obj
-
-# target to build an object file
-main.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\volcania.dir\build.make CMakeFiles/volcania.dir/main.cpp.obj
-.PHONY : main.cpp.obj
-
-main.i: main.cpp.i
-.PHONY : main.i
-
-# target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\volcania.dir\build.make CMakeFiles/volcania.dir/main.cpp.i
-.PHONY : main.cpp.i
-
-main.s: main.cpp.s
-.PHONY : main.s
+Source_file/main.s: Source_file/main.cpp.s
+.PHONY : Source_file/main.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\volcania.dir\build.make CMakeFiles/volcania.dir/main.cpp.s
-.PHONY : main.cpp.s
+Source_file/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\volcania.dir\build.make CMakeFiles/volcania.dir/Source_file/main.cpp.s
+.PHONY : Source_file/main.cpp.s
 
 # Help Target
 help:
@@ -353,15 +329,18 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... volcania
-	@echo ... Crater.obj
-	@echo ... Crater.i
-	@echo ... Crater.s
 	@echo ... Source_file/EBO.obj
 	@echo ... Source_file/EBO.i
 	@echo ... Source_file/EBO.s
 	@echo ... Source_file/Glad/src/glad.obj
 	@echo ... Source_file/Glad/src/glad.i
 	@echo ... Source_file/Glad/src/glad.s
+	@echo ... Source_file/Mesh.obj
+	@echo ... Source_file/Mesh.i
+	@echo ... Source_file/Mesh.s
+	@echo ... Source_file/Model.obj
+	@echo ... Source_file/Model.i
+	@echo ... Source_file/Model.s
 	@echo ... Source_file/Shader.obj
 	@echo ... Source_file/Shader.i
 	@echo ... Source_file/Shader.s
@@ -371,15 +350,9 @@ help:
 	@echo ... Source_file/VBO.obj
 	@echo ... Source_file/VBO.i
 	@echo ... Source_file/VBO.s
-	@echo ... Source_file/stb_image.obj
-	@echo ... Source_file/stb_image.i
-	@echo ... Source_file/stb_image.s
-	@echo ... Volcano.obj
-	@echo ... Volcano.i
-	@echo ... Volcano.s
-	@echo ... main.obj
-	@echo ... main.i
-	@echo ... main.s
+	@echo ... Source_file/main.obj
+	@echo ... Source_file/main.i
+	@echo ... Source_file/main.s
 .PHONY : help
 
 

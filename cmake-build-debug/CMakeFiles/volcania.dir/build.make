@@ -68,56 +68,71 @@ include CMakeFiles/volcania.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/volcania.dir/flags.make
 
-CMakeFiles/volcania.dir/main.cpp.obj: CMakeFiles/volcania.dir/flags.make
-CMakeFiles/volcania.dir/main.cpp.obj: CMakeFiles/volcania.dir/includes_CXX.rsp
-CMakeFiles/volcania.dir/main.cpp.obj: C:/Users/wirtb/CLionProjects/volcania/main.cpp
-CMakeFiles/volcania.dir/main.cpp.obj: CMakeFiles/volcania.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\wirtb\CLionProjects\volcania\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/volcania.dir/main.cpp.obj"
-	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/volcania.dir/main.cpp.obj -MF CMakeFiles\volcania.dir\main.cpp.obj.d -o CMakeFiles\volcania.dir\main.cpp.obj -c C:\Users\wirtb\CLionProjects\volcania\main.cpp
+CMakeFiles/volcania.dir/Source_file/main.cpp.obj: CMakeFiles/volcania.dir/flags.make
+CMakeFiles/volcania.dir/Source_file/main.cpp.obj: CMakeFiles/volcania.dir/includes_CXX.rsp
+CMakeFiles/volcania.dir/Source_file/main.cpp.obj: C:/Users/wirtb/CLionProjects/volcania/Source\ file/main.cpp
+CMakeFiles/volcania.dir/Source_file/main.cpp.obj: CMakeFiles/volcania.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\wirtb\CLionProjects\volcania\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/volcania.dir/Source_file/main.cpp.obj"
+	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/volcania.dir/Source_file/main.cpp.obj -MF CMakeFiles\volcania.dir\Source_file\main.cpp.obj.d -o CMakeFiles\volcania.dir\Source_file\main.cpp.obj -c "C:\Users\wirtb\CLionProjects\volcania\Source file\main.cpp"
 
-CMakeFiles/volcania.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/volcania.dir/main.cpp.i"
-	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\wirtb\CLionProjects\volcania\main.cpp > CMakeFiles\volcania.dir\main.cpp.i
+CMakeFiles/volcania.dir/Source_file/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/volcania.dir/Source_file/main.cpp.i"
+	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\wirtb\CLionProjects\volcania\Source file\main.cpp" > CMakeFiles\volcania.dir\Source_file\main.cpp.i
 
-CMakeFiles/volcania.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/volcania.dir/main.cpp.s"
-	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\wirtb\CLionProjects\volcania\main.cpp -o CMakeFiles\volcania.dir\main.cpp.s
+CMakeFiles/volcania.dir/Source_file/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/volcania.dir/Source_file/main.cpp.s"
+	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\wirtb\CLionProjects\volcania\Source file\main.cpp" -o CMakeFiles\volcania.dir\Source_file\main.cpp.s
 
-CMakeFiles/volcania.dir/Source_file/Glad/src/glad.c.obj: CMakeFiles/volcania.dir/flags.make
-CMakeFiles/volcania.dir/Source_file/Glad/src/glad.c.obj: CMakeFiles/volcania.dir/includes_C.rsp
-CMakeFiles/volcania.dir/Source_file/Glad/src/glad.c.obj: C:/Users/wirtb/CLionProjects/volcania/Source\ file/Glad/src/glad.c
-CMakeFiles/volcania.dir/Source_file/Glad/src/glad.c.obj: CMakeFiles/volcania.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\wirtb\CLionProjects\volcania\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/volcania.dir/Source_file/Glad/src/glad.c.obj"
-	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/volcania.dir/Source_file/Glad/src/glad.c.obj -MF CMakeFiles\volcania.dir\Source_file\Glad\src\glad.c.obj.d -o CMakeFiles\volcania.dir\Source_file\Glad\src\glad.c.obj -c "C:\Users\wirtb\CLionProjects\volcania\Source file\Glad\src\glad.c"
+CMakeFiles/volcania.dir/Source_file/Shader.cpp.obj: CMakeFiles/volcania.dir/flags.make
+CMakeFiles/volcania.dir/Source_file/Shader.cpp.obj: CMakeFiles/volcania.dir/includes_CXX.rsp
+CMakeFiles/volcania.dir/Source_file/Shader.cpp.obj: C:/Users/wirtb/CLionProjects/volcania/Source\ file/Shader.cpp
+CMakeFiles/volcania.dir/Source_file/Shader.cpp.obj: CMakeFiles/volcania.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\wirtb\CLionProjects\volcania\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/volcania.dir/Source_file/Shader.cpp.obj"
+	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/volcania.dir/Source_file/Shader.cpp.obj -MF CMakeFiles\volcania.dir\Source_file\Shader.cpp.obj.d -o CMakeFiles\volcania.dir\Source_file\Shader.cpp.obj -c "C:\Users\wirtb\CLionProjects\volcania\Source file\Shader.cpp"
 
-CMakeFiles/volcania.dir/Source_file/Glad/src/glad.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/volcania.dir/Source_file/Glad/src/glad.c.i"
-	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Users\wirtb\CLionProjects\volcania\Source file\Glad\src\glad.c" > CMakeFiles\volcania.dir\Source_file\Glad\src\glad.c.i
+CMakeFiles/volcania.dir/Source_file/Shader.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/volcania.dir/Source_file/Shader.cpp.i"
+	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\wirtb\CLionProjects\volcania\Source file\Shader.cpp" > CMakeFiles\volcania.dir\Source_file\Shader.cpp.i
 
-CMakeFiles/volcania.dir/Source_file/Glad/src/glad.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/volcania.dir/Source_file/Glad/src/glad.c.s"
-	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\wirtb\CLionProjects\volcania\Source file\Glad\src\glad.c" -o CMakeFiles\volcania.dir\Source_file\Glad\src\glad.c.s
+CMakeFiles/volcania.dir/Source_file/Shader.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/volcania.dir/Source_file/Shader.cpp.s"
+	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\wirtb\CLionProjects\volcania\Source file\Shader.cpp" -o CMakeFiles\volcania.dir\Source_file\Shader.cpp.s
 
-CMakeFiles/volcania.dir/Source_file/EBO.cpp.obj: CMakeFiles/volcania.dir/flags.make
-CMakeFiles/volcania.dir/Source_file/EBO.cpp.obj: CMakeFiles/volcania.dir/includes_CXX.rsp
-CMakeFiles/volcania.dir/Source_file/EBO.cpp.obj: C:/Users/wirtb/CLionProjects/volcania/Source\ file/EBO.cpp
-CMakeFiles/volcania.dir/Source_file/EBO.cpp.obj: CMakeFiles/volcania.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\wirtb\CLionProjects\volcania\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/volcania.dir/Source_file/EBO.cpp.obj"
-	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/volcania.dir/Source_file/EBO.cpp.obj -MF CMakeFiles\volcania.dir\Source_file\EBO.cpp.obj.d -o CMakeFiles\volcania.dir\Source_file\EBO.cpp.obj -c "C:\Users\wirtb\CLionProjects\volcania\Source file\EBO.cpp"
+CMakeFiles/volcania.dir/Source_file/Model.cpp.obj: CMakeFiles/volcania.dir/flags.make
+CMakeFiles/volcania.dir/Source_file/Model.cpp.obj: CMakeFiles/volcania.dir/includes_CXX.rsp
+CMakeFiles/volcania.dir/Source_file/Model.cpp.obj: C:/Users/wirtb/CLionProjects/volcania/Source\ file/Model.cpp
+CMakeFiles/volcania.dir/Source_file/Model.cpp.obj: CMakeFiles/volcania.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\wirtb\CLionProjects\volcania\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/volcania.dir/Source_file/Model.cpp.obj"
+	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/volcania.dir/Source_file/Model.cpp.obj -MF CMakeFiles\volcania.dir\Source_file\Model.cpp.obj.d -o CMakeFiles\volcania.dir\Source_file\Model.cpp.obj -c "C:\Users\wirtb\CLionProjects\volcania\Source file\Model.cpp"
 
-CMakeFiles/volcania.dir/Source_file/EBO.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/volcania.dir/Source_file/EBO.cpp.i"
-	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\wirtb\CLionProjects\volcania\Source file\EBO.cpp" > CMakeFiles\volcania.dir\Source_file\EBO.cpp.i
+CMakeFiles/volcania.dir/Source_file/Model.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/volcania.dir/Source_file/Model.cpp.i"
+	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\wirtb\CLionProjects\volcania\Source file\Model.cpp" > CMakeFiles\volcania.dir\Source_file\Model.cpp.i
 
-CMakeFiles/volcania.dir/Source_file/EBO.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/volcania.dir/Source_file/EBO.cpp.s"
-	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\wirtb\CLionProjects\volcania\Source file\EBO.cpp" -o CMakeFiles\volcania.dir\Source_file\EBO.cpp.s
+CMakeFiles/volcania.dir/Source_file/Model.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/volcania.dir/Source_file/Model.cpp.s"
+	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\wirtb\CLionProjects\volcania\Source file\Model.cpp" -o CMakeFiles\volcania.dir\Source_file\Model.cpp.s
+
+CMakeFiles/volcania.dir/Source_file/Mesh.cpp.obj: CMakeFiles/volcania.dir/flags.make
+CMakeFiles/volcania.dir/Source_file/Mesh.cpp.obj: CMakeFiles/volcania.dir/includes_CXX.rsp
+CMakeFiles/volcania.dir/Source_file/Mesh.cpp.obj: C:/Users/wirtb/CLionProjects/volcania/Source\ file/Mesh.cpp
+CMakeFiles/volcania.dir/Source_file/Mesh.cpp.obj: CMakeFiles/volcania.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\wirtb\CLionProjects\volcania\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/volcania.dir/Source_file/Mesh.cpp.obj"
+	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/volcania.dir/Source_file/Mesh.cpp.obj -MF CMakeFiles\volcania.dir\Source_file\Mesh.cpp.obj.d -o CMakeFiles\volcania.dir\Source_file\Mesh.cpp.obj -c "C:\Users\wirtb\CLionProjects\volcania\Source file\Mesh.cpp"
+
+CMakeFiles/volcania.dir/Source_file/Mesh.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/volcania.dir/Source_file/Mesh.cpp.i"
+	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\wirtb\CLionProjects\volcania\Source file\Mesh.cpp" > CMakeFiles\volcania.dir\Source_file\Mesh.cpp.i
+
+CMakeFiles/volcania.dir/Source_file/Mesh.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/volcania.dir/Source_file/Mesh.cpp.s"
+	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\wirtb\CLionProjects\volcania\Source file\Mesh.cpp" -o CMakeFiles\volcania.dir\Source_file\Mesh.cpp.s
 
 CMakeFiles/volcania.dir/Source_file/VAO.cpp.obj: CMakeFiles/volcania.dir/flags.make
 CMakeFiles/volcania.dir/Source_file/VAO.cpp.obj: CMakeFiles/volcania.dir/includes_CXX.rsp
 CMakeFiles/volcania.dir/Source_file/VAO.cpp.obj: C:/Users/wirtb/CLionProjects/volcania/Source\ file/VAO.cpp
 CMakeFiles/volcania.dir/Source_file/VAO.cpp.obj: CMakeFiles/volcania.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\wirtb\CLionProjects\volcania\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/volcania.dir/Source_file/VAO.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\wirtb\CLionProjects\volcania\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/volcania.dir/Source_file/VAO.cpp.obj"
 	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/volcania.dir/Source_file/VAO.cpp.obj -MF CMakeFiles\volcania.dir\Source_file\VAO.cpp.obj.d -o CMakeFiles\volcania.dir\Source_file\VAO.cpp.obj -c "C:\Users\wirtb\CLionProjects\volcania\Source file\VAO.cpp"
 
 CMakeFiles/volcania.dir/Source_file/VAO.cpp.i: cmake_force
@@ -132,7 +147,7 @@ CMakeFiles/volcania.dir/Source_file/VBO.cpp.obj: CMakeFiles/volcania.dir/flags.m
 CMakeFiles/volcania.dir/Source_file/VBO.cpp.obj: CMakeFiles/volcania.dir/includes_CXX.rsp
 CMakeFiles/volcania.dir/Source_file/VBO.cpp.obj: C:/Users/wirtb/CLionProjects/volcania/Source\ file/VBO.cpp
 CMakeFiles/volcania.dir/Source_file/VBO.cpp.obj: CMakeFiles/volcania.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\wirtb\CLionProjects\volcania\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/volcania.dir/Source_file/VBO.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\wirtb\CLionProjects\volcania\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/volcania.dir/Source_file/VBO.cpp.obj"
 	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/volcania.dir/Source_file/VBO.cpp.obj -MF CMakeFiles\volcania.dir\Source_file\VBO.cpp.obj.d -o CMakeFiles\volcania.dir\Source_file\VBO.cpp.obj -c "C:\Users\wirtb\CLionProjects\volcania\Source file\VBO.cpp"
 
 CMakeFiles/volcania.dir/Source_file/VBO.cpp.i: cmake_force
@@ -143,96 +158,70 @@ CMakeFiles/volcania.dir/Source_file/VBO.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/volcania.dir/Source_file/VBO.cpp.s"
 	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\wirtb\CLionProjects\volcania\Source file\VBO.cpp" -o CMakeFiles\volcania.dir\Source_file\VBO.cpp.s
 
-CMakeFiles/volcania.dir/Source_file/Shader.cpp.obj: CMakeFiles/volcania.dir/flags.make
-CMakeFiles/volcania.dir/Source_file/Shader.cpp.obj: CMakeFiles/volcania.dir/includes_CXX.rsp
-CMakeFiles/volcania.dir/Source_file/Shader.cpp.obj: C:/Users/wirtb/CLionProjects/volcania/Source\ file/Shader.cpp
-CMakeFiles/volcania.dir/Source_file/Shader.cpp.obj: CMakeFiles/volcania.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\wirtb\CLionProjects\volcania\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/volcania.dir/Source_file/Shader.cpp.obj"
-	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/volcania.dir/Source_file/Shader.cpp.obj -MF CMakeFiles\volcania.dir\Source_file\Shader.cpp.obj.d -o CMakeFiles\volcania.dir\Source_file\Shader.cpp.obj -c "C:\Users\wirtb\CLionProjects\volcania\Source file\Shader.cpp"
+CMakeFiles/volcania.dir/Source_file/EBO.cpp.obj: CMakeFiles/volcania.dir/flags.make
+CMakeFiles/volcania.dir/Source_file/EBO.cpp.obj: CMakeFiles/volcania.dir/includes_CXX.rsp
+CMakeFiles/volcania.dir/Source_file/EBO.cpp.obj: C:/Users/wirtb/CLionProjects/volcania/Source\ file/EBO.cpp
+CMakeFiles/volcania.dir/Source_file/EBO.cpp.obj: CMakeFiles/volcania.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\wirtb\CLionProjects\volcania\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/volcania.dir/Source_file/EBO.cpp.obj"
+	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/volcania.dir/Source_file/EBO.cpp.obj -MF CMakeFiles\volcania.dir\Source_file\EBO.cpp.obj.d -o CMakeFiles\volcania.dir\Source_file\EBO.cpp.obj -c "C:\Users\wirtb\CLionProjects\volcania\Source file\EBO.cpp"
 
-CMakeFiles/volcania.dir/Source_file/Shader.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/volcania.dir/Source_file/Shader.cpp.i"
-	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\wirtb\CLionProjects\volcania\Source file\Shader.cpp" > CMakeFiles\volcania.dir\Source_file\Shader.cpp.i
+CMakeFiles/volcania.dir/Source_file/EBO.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/volcania.dir/Source_file/EBO.cpp.i"
+	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\wirtb\CLionProjects\volcania\Source file\EBO.cpp" > CMakeFiles\volcania.dir\Source_file\EBO.cpp.i
 
-CMakeFiles/volcania.dir/Source_file/Shader.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/volcania.dir/Source_file/Shader.cpp.s"
-	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\wirtb\CLionProjects\volcania\Source file\Shader.cpp" -o CMakeFiles\volcania.dir\Source_file\Shader.cpp.s
+CMakeFiles/volcania.dir/Source_file/EBO.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/volcania.dir/Source_file/EBO.cpp.s"
+	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\wirtb\CLionProjects\volcania\Source file\EBO.cpp" -o CMakeFiles\volcania.dir\Source_file\EBO.cpp.s
 
-CMakeFiles/volcania.dir/Source_file/stb_image.cpp.obj: CMakeFiles/volcania.dir/flags.make
-CMakeFiles/volcania.dir/Source_file/stb_image.cpp.obj: CMakeFiles/volcania.dir/includes_CXX.rsp
-CMakeFiles/volcania.dir/Source_file/stb_image.cpp.obj: C:/Users/wirtb/CLionProjects/volcania/Source\ file/stb_image.cpp
-CMakeFiles/volcania.dir/Source_file/stb_image.cpp.obj: CMakeFiles/volcania.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\wirtb\CLionProjects\volcania\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/volcania.dir/Source_file/stb_image.cpp.obj"
-	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/volcania.dir/Source_file/stb_image.cpp.obj -MF CMakeFiles\volcania.dir\Source_file\stb_image.cpp.obj.d -o CMakeFiles\volcania.dir\Source_file\stb_image.cpp.obj -c "C:\Users\wirtb\CLionProjects\volcania\Source file\stb_image.cpp"
+CMakeFiles/volcania.dir/Source_file/Glad/src/glad.c.obj: CMakeFiles/volcania.dir/flags.make
+CMakeFiles/volcania.dir/Source_file/Glad/src/glad.c.obj: CMakeFiles/volcania.dir/includes_C.rsp
+CMakeFiles/volcania.dir/Source_file/Glad/src/glad.c.obj: C:/Users/wirtb/CLionProjects/volcania/Source\ file/Glad/src/glad.c
+CMakeFiles/volcania.dir/Source_file/Glad/src/glad.c.obj: CMakeFiles/volcania.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\wirtb\CLionProjects\volcania\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/volcania.dir/Source_file/Glad/src/glad.c.obj"
+	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/volcania.dir/Source_file/Glad/src/glad.c.obj -MF CMakeFiles\volcania.dir\Source_file\Glad\src\glad.c.obj.d -o CMakeFiles\volcania.dir\Source_file\Glad\src\glad.c.obj -c "C:\Users\wirtb\CLionProjects\volcania\Source file\Glad\src\glad.c"
 
-CMakeFiles/volcania.dir/Source_file/stb_image.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/volcania.dir/Source_file/stb_image.cpp.i"
-	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\wirtb\CLionProjects\volcania\Source file\stb_image.cpp" > CMakeFiles\volcania.dir\Source_file\stb_image.cpp.i
+CMakeFiles/volcania.dir/Source_file/Glad/src/glad.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/volcania.dir/Source_file/Glad/src/glad.c.i"
+	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Users\wirtb\CLionProjects\volcania\Source file\Glad\src\glad.c" > CMakeFiles\volcania.dir\Source_file\Glad\src\glad.c.i
 
-CMakeFiles/volcania.dir/Source_file/stb_image.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/volcania.dir/Source_file/stb_image.cpp.s"
-	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\wirtb\CLionProjects\volcania\Source file\stb_image.cpp" -o CMakeFiles\volcania.dir\Source_file\stb_image.cpp.s
-
-CMakeFiles/volcania.dir/Volcano.cpp.obj: CMakeFiles/volcania.dir/flags.make
-CMakeFiles/volcania.dir/Volcano.cpp.obj: CMakeFiles/volcania.dir/includes_CXX.rsp
-CMakeFiles/volcania.dir/Volcano.cpp.obj: C:/Users/wirtb/CLionProjects/volcania/Volcano.cpp
-CMakeFiles/volcania.dir/Volcano.cpp.obj: CMakeFiles/volcania.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\wirtb\CLionProjects\volcania\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/volcania.dir/Volcano.cpp.obj"
-	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/volcania.dir/Volcano.cpp.obj -MF CMakeFiles\volcania.dir\Volcano.cpp.obj.d -o CMakeFiles\volcania.dir\Volcano.cpp.obj -c C:\Users\wirtb\CLionProjects\volcania\Volcano.cpp
-
-CMakeFiles/volcania.dir/Volcano.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/volcania.dir/Volcano.cpp.i"
-	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\wirtb\CLionProjects\volcania\Volcano.cpp > CMakeFiles\volcania.dir\Volcano.cpp.i
-
-CMakeFiles/volcania.dir/Volcano.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/volcania.dir/Volcano.cpp.s"
-	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\wirtb\CLionProjects\volcania\Volcano.cpp -o CMakeFiles\volcania.dir\Volcano.cpp.s
-
-CMakeFiles/volcania.dir/Crater.cpp.obj: CMakeFiles/volcania.dir/flags.make
-CMakeFiles/volcania.dir/Crater.cpp.obj: CMakeFiles/volcania.dir/includes_CXX.rsp
-CMakeFiles/volcania.dir/Crater.cpp.obj: C:/Users/wirtb/CLionProjects/volcania/Crater.cpp
-CMakeFiles/volcania.dir/Crater.cpp.obj: CMakeFiles/volcania.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\wirtb\CLionProjects\volcania\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/volcania.dir/Crater.cpp.obj"
-	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/volcania.dir/Crater.cpp.obj -MF CMakeFiles\volcania.dir\Crater.cpp.obj.d -o CMakeFiles\volcania.dir\Crater.cpp.obj -c C:\Users\wirtb\CLionProjects\volcania\Crater.cpp
-
-CMakeFiles/volcania.dir/Crater.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/volcania.dir/Crater.cpp.i"
-	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\wirtb\CLionProjects\volcania\Crater.cpp > CMakeFiles\volcania.dir\Crater.cpp.i
-
-CMakeFiles/volcania.dir/Crater.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/volcania.dir/Crater.cpp.s"
-	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\wirtb\CLionProjects\volcania\Crater.cpp -o CMakeFiles\volcania.dir\Crater.cpp.s
+CMakeFiles/volcania.dir/Source_file/Glad/src/glad.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/volcania.dir/Source_file/Glad/src/glad.c.s"
+	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\wirtb\CLionProjects\volcania\Source file\Glad\src\glad.c" -o CMakeFiles\volcania.dir\Source_file\Glad\src\glad.c.s
 
 # Object files for target volcania
 volcania_OBJECTS = \
-"CMakeFiles/volcania.dir/main.cpp.obj" \
-"CMakeFiles/volcania.dir/Source_file/Glad/src/glad.c.obj" \
-"CMakeFiles/volcania.dir/Source_file/EBO.cpp.obj" \
+"CMakeFiles/volcania.dir/Source_file/main.cpp.obj" \
+"CMakeFiles/volcania.dir/Source_file/Shader.cpp.obj" \
+"CMakeFiles/volcania.dir/Source_file/Model.cpp.obj" \
+"CMakeFiles/volcania.dir/Source_file/Mesh.cpp.obj" \
 "CMakeFiles/volcania.dir/Source_file/VAO.cpp.obj" \
 "CMakeFiles/volcania.dir/Source_file/VBO.cpp.obj" \
-"CMakeFiles/volcania.dir/Source_file/Shader.cpp.obj" \
-"CMakeFiles/volcania.dir/Source_file/stb_image.cpp.obj" \
-"CMakeFiles/volcania.dir/Volcano.cpp.obj" \
-"CMakeFiles/volcania.dir/Crater.cpp.obj"
+"CMakeFiles/volcania.dir/Source_file/EBO.cpp.obj" \
+"CMakeFiles/volcania.dir/Source_file/Glad/src/glad.c.obj"
 
 # External object files for target volcania
 volcania_EXTERNAL_OBJECTS =
 
-volcania.exe: CMakeFiles/volcania.dir/main.cpp.obj
-volcania.exe: CMakeFiles/volcania.dir/Source_file/Glad/src/glad.c.obj
-volcania.exe: CMakeFiles/volcania.dir/Source_file/EBO.cpp.obj
+volcania.exe: CMakeFiles/volcania.dir/Source_file/main.cpp.obj
+volcania.exe: CMakeFiles/volcania.dir/Source_file/Shader.cpp.obj
+volcania.exe: CMakeFiles/volcania.dir/Source_file/Model.cpp.obj
+volcania.exe: CMakeFiles/volcania.dir/Source_file/Mesh.cpp.obj
 volcania.exe: CMakeFiles/volcania.dir/Source_file/VAO.cpp.obj
 volcania.exe: CMakeFiles/volcania.dir/Source_file/VBO.cpp.obj
-volcania.exe: CMakeFiles/volcania.dir/Source_file/Shader.cpp.obj
-volcania.exe: CMakeFiles/volcania.dir/Source_file/stb_image.cpp.obj
-volcania.exe: CMakeFiles/volcania.dir/Volcano.cpp.obj
-volcania.exe: CMakeFiles/volcania.dir/Crater.cpp.obj
+volcania.exe: CMakeFiles/volcania.dir/Source_file/EBO.cpp.obj
+volcania.exe: CMakeFiles/volcania.dir/Source_file/Glad/src/glad.c.obj
 volcania.exe: CMakeFiles/volcania.dir/build.make
+volcania.exe: C:/msys64/mingw64/lib/libglfw3.dll.a
+volcania.exe: C:/msys64/mingw64/lib/libassimp.dll.a
+volcania.exe: C:/msys64/mingw64/lib/libz.dll.a
+volcania.exe: C:/msys64/mingw64/lib/libminizip.dll.a
 volcania.exe: CMakeFiles/volcania.dir/linkLibs.rsp
 volcania.exe: CMakeFiles/volcania.dir/objects1.rsp
 volcania.exe: CMakeFiles/volcania.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\wirtb\CLionProjects\volcania\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable volcania.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\wirtb\CLionProjects\volcania\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable volcania.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\volcania.dir\link.txt --verbose=$(VERBOSE)
+	"C:\Program Files\JetBrains\CLion 2024.3.5\bin\cmake\win\x64\bin\cmake.exe" -E copy_directory C:/Users/wirtb/CLionProjects/volcania/models C:/Users/wirtb/CLionProjects/volcania/cmake-build-debug/models
+	"C:\Program Files\JetBrains\CLion 2024.3.5\bin\cmake\win\x64\bin\cmake.exe" -E copy_directory C:/Users/wirtb/CLionProjects/volcania/shaders C:/Users/wirtb/CLionProjects/volcania/cmake-build-debug/shaders
 
 # Rule to build all files generated by this target.
 CMakeFiles/volcania.dir/build: volcania.exe

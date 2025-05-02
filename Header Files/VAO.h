@@ -1,19 +1,18 @@
-#ifndef VAO_CLASS_H
-#define VAO_CLASS_H
+#ifndef VAO_H
+#define VAO_H
 
 #include <glad/glad.h>
 #include "VBO.h"
 
-class VAO
-{
+class VAO {
 public:
-    GLuint ID;
+    GLuint ID;  // ID de OpenGL para el VAO
 
-    VAO();
-    void Bind();
-    void Unbind();
-    void Delete();
-    void LinkAttrib(VBO& vbo, GLuint layout, GLuint numComponents, GLenum type, GLsizeiptr stride, void* offset);
+    VAO();          // Constructor
+    void LinkAttrib(VBO& VBO, GLuint layout, GLuint numComponents, GLenum type, GLsizeiptr stride, void* offset);  // Vincular atributos
+    void Bind();    // Vincular VAO
+    void Unbind();  // Desvincular VAO
+    void Delete();  // Eliminar VAO
 };
 
 #endif

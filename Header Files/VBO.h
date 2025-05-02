@@ -5,10 +5,9 @@
 
 class VBO {
 public:
-    GLuint VAO, VBO_ID;
-
-    VBO(float* vertices, GLsizeiptr size);
-
+    GLuint ID;
+    VBO();  // Constructor vacío
+    void Data(void* vertices, GLsizeiptr size);  // Método para datos crudos
     void Bind();
     void Unbind();
     void Delete();

@@ -245,6 +245,15 @@ PKG_CONFIG_ARGN:STRING=
 //pkg-config executable
 PKG_CONFIG_EXECUTABLE:FILEPATH=C:/msys64/mingw64/bin/pkg-config.exe
 
+//The directory containing a CMake configuration file for assimp.
+assimp_DIR:PATH=C:/msys64/mingw64/lib/cmake/assimp-5.4
+
+//The directory containing a CMake configuration file for glfw3.
+glfw3_DIR:PATH=C:/msys64/mingw64/lib/cmake/glfw3
+
+//The directory containing a CMake configuration file for glm.
+glm_DIR:PATH=C:/msys64/mingw64/share/glm
+
 //Path to a library.
 pkgcfg_lib_GLFW_glfw3:FILEPATH=C:/msys64/mingw64/lib/libglfw3.dll.a
 
@@ -340,6 +349,8 @@ CMAKE_GENERATOR_INSTANCE:INTERNAL=
 CMAKE_GENERATOR_PLATFORM:INTERNAL=
 //Name of generator toolset.
 CMAKE_GENERATOR_TOOLSET:INTERNAL=
+//Test CMAKE_HAVE_LIBC_PTHREAD
+CMAKE_HAVE_LIBC_PTHREAD:INTERNAL=1
 //Source directory with the top level CMakeLists.txt file for this
 // project
 CMAKE_HOME_DIRECTORY:INTERNAL=C:/Users/wirtb/CLionProjects/volcania
@@ -416,6 +427,8 @@ CMAKE_TAPI-ADVANCED:INTERNAL=1
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
 //Details about finding PkgConfig
 FIND_PACKAGE_MESSAGE_DETAILS_PkgConfig:INTERNAL=[C:/msys64/mingw64/bin/pkg-config.exe][v2.3.0()]
+//Details about finding Threads
+FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
 GLFW_CFLAGS:INTERNAL=-IC:/msys64/mingw64/bin/../include
 GLFW_CFLAGS_I:INTERNAL=
 GLFW_CFLAGS_OTHER:INTERNAL=

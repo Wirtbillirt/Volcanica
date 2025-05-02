@@ -9,14 +9,13 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/Users/wirtb/CLionProjects/volcania/Source file/Glad/src/glad.c" "CMakeFiles/volcania.dir/Source_file/Glad/src/glad.c.obj" "gcc" "CMakeFiles/volcania.dir/Source_file/Glad/src/glad.c.obj.d"
-  "C:/Users/wirtb/CLionProjects/volcania/Crater.cpp" "CMakeFiles/volcania.dir/Crater.cpp.obj" "gcc" "CMakeFiles/volcania.dir/Crater.cpp.obj.d"
   "C:/Users/wirtb/CLionProjects/volcania/Source file/EBO.cpp" "CMakeFiles/volcania.dir/Source_file/EBO.cpp.obj" "gcc" "CMakeFiles/volcania.dir/Source_file/EBO.cpp.obj.d"
+  "C:/Users/wirtb/CLionProjects/volcania/Source file/Mesh.cpp" "CMakeFiles/volcania.dir/Source_file/Mesh.cpp.obj" "gcc" "CMakeFiles/volcania.dir/Source_file/Mesh.cpp.obj.d"
+  "C:/Users/wirtb/CLionProjects/volcania/Source file/Model.cpp" "CMakeFiles/volcania.dir/Source_file/Model.cpp.obj" "gcc" "CMakeFiles/volcania.dir/Source_file/Model.cpp.obj.d"
   "C:/Users/wirtb/CLionProjects/volcania/Source file/Shader.cpp" "CMakeFiles/volcania.dir/Source_file/Shader.cpp.obj" "gcc" "CMakeFiles/volcania.dir/Source_file/Shader.cpp.obj.d"
   "C:/Users/wirtb/CLionProjects/volcania/Source file/VAO.cpp" "CMakeFiles/volcania.dir/Source_file/VAO.cpp.obj" "gcc" "CMakeFiles/volcania.dir/Source_file/VAO.cpp.obj.d"
   "C:/Users/wirtb/CLionProjects/volcania/Source file/VBO.cpp" "CMakeFiles/volcania.dir/Source_file/VBO.cpp.obj" "gcc" "CMakeFiles/volcania.dir/Source_file/VBO.cpp.obj.d"
-  "C:/Users/wirtb/CLionProjects/volcania/Source file/stb_image.cpp" "CMakeFiles/volcania.dir/Source_file/stb_image.cpp.obj" "gcc" "CMakeFiles/volcania.dir/Source_file/stb_image.cpp.obj.d"
-  "C:/Users/wirtb/CLionProjects/volcania/Volcano.cpp" "CMakeFiles/volcania.dir/Volcano.cpp.obj" "gcc" "CMakeFiles/volcania.dir/Volcano.cpp.obj.d"
-  "C:/Users/wirtb/CLionProjects/volcania/main.cpp" "CMakeFiles/volcania.dir/main.cpp.obj" "gcc" "CMakeFiles/volcania.dir/main.cpp.obj.d"
+  "C:/Users/wirtb/CLionProjects/volcania/Source file/main.cpp" "CMakeFiles/volcania.dir/Source_file/main.cpp.obj" "gcc" "CMakeFiles/volcania.dir/Source_file/main.cpp.obj.d"
   )
 
 # Targets to which this target links which contain Fortran sources.
