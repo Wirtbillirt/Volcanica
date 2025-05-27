@@ -1,0 +1,22 @@
+# Ignora archivos pesados y temporales de Visual Studio
+.vs
+.VC.db
+.ipch
+.user
+.suo
+.cache
+.log
+.obj
+.exe
+.pdb
+.dll
+.aps
+.ncb
+.sdf
+.opensdf
+.sbr
+.class
+.DS_Store
+.tmp
+.log
+.bak
