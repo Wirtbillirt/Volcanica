@@ -11,8 +11,8 @@ class Model
 {
 public:
 	// Loads in a model from a file and stores tha information in 'data', 'JSON', and 'file'
-	Model(const char* file);
-
+	Model(const char* file, bool aplicarTransformacionGlobal = true);
+	std::vector<Mesh>& GetMeshes() { return meshes; }
 	void Draw(Shader& shader, Camera& camera);
 
 private:

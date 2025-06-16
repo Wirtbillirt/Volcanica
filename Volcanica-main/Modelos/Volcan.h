@@ -6,17 +6,23 @@
 #include "AudioManager.h"
 #include <string>
 #include "Skybox.h"
-#include "Terreno.h"
+#include <glm/glm.hpp> // Asegúrate de incluir esto
+#include <glm/gtc/quaternion.hpp>
 
 class Volcan
 {
 private:
 	int width, height;
 	Model* model = nullptr;
+	Model* modelExtra = nullptr;               // Modelo adicional para pruebas de colisión
+	glm::vec3 modeloExtraPos = glm::vec3(0.0f, 5.0f, 0.0f);  // posición para que no colisione con el principal
+	glm::quat modeloExtraRotacion;
+
 	std::string rutaModelo;
 	Skybox skybox;
-	AudioManager audio; 
-	Terreno* terreno = nullptr;
+	AudioManager audio;
+	
+
 
 public:
 	Volcan(int width, int height);

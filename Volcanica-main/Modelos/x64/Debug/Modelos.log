@@ -1,2 +1,3 @@
-﻿  Terreno.cpp
+﻿  Mesh.cpp
+C:\Users\bdown\Desktop\Trabajos en CM\Volcanica-main\Modelos\Mesh.cpp(78,43): warning C4267: 'argument': conversion from 'size_t' to 'GLsizei', possible loss of data
   Modelos.vcxproj -> C:\Users\bdown\Desktop\Trabajos en CM\Volcanica-main\x64\Debug\Modelos.exe

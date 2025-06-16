@@ -2,7 +2,7 @@
 #define MESH_CLASS_H
 
 #include<string>
-
+#include "Collider.h"
 #include"VAO.h"
 #include"EBO.h"
 #include"Camara.h"
@@ -16,6 +16,8 @@ public:
 	std::vector <Texture> textures;
 	// Store VAO in public so it can be used in the Draw function
 	VAO VAO;
+	
+	Collider collider;
 
 	// Initializes the mesh
 	Mesh(std::vector <Vertex>& vertices, std::vector <GLuint>& indices, std::vector <Texture>& textures);

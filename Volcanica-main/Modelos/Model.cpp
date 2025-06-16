@@ -1,34 +1,34 @@
 #include"Model.h"
 
-Model::Model(const char* file)
+Model::Model(const char* file, bool aplicarTransformacionGlobal)
 {
-	// Make a JSON object
 	std::string text = get_file_contents(file);
 	JSON = json::parse(text);
 
-	// Get the binary data
 	Model::file = file;
 	data = getData();
 
-	// Matriz de rotación global: 180° en X y 90° en Z para acostar el modelo
-	glm::mat4 flipY = glm::rotate(glm::mat4(1.0f), glm::radians(180.0f), glm::vec3(1.0f, 0.0f, 0.0f));
-	glm::mat4 rotateZ = glm::rotate(glm::mat4(1.0f), glm::radians(-90.0f), glm::vec3(0.0f, 0.0f, 1.0f));
-	glm::mat4 globalTransform = rotateZ * flipY;
+	// Solo aplicar transformaciÃ³n si el parÃ¡metro lo permite
+	glm::mat4 globalTransform = glm::mat4(1.0f);
+	if (aplicarTransformacionGlobal) {
+		glm::mat4 flipY = glm::rotate(glm::mat4(1.0f), glm::radians(180.0f), glm::vec3(1.0f, 0.0f, 0.0f));
+		glm::mat4 rotateZ = glm::rotate(glm::mat4(1.0f), glm::radians(-90.0f), glm::vec3(0.0f, 0.0f, 1.0f));
+		globalTransform = rotateZ * flipY;
+	}
 
-	// Busca el nodo raíz real desde scenes[0].nodes[0]
 	unsigned int rootNode = 0;
 	if (JSON.contains("scenes") && JSON["scenes"].size() > 0 && JSON["scenes"][0].contains("nodes") && JSON["scenes"][0]["nodes"].size() > 0)
 		rootNode = JSON["scenes"][0]["nodes"][0];
 
-	// Llama a traverseNode con la matriz globalTransform
 	traverseNode(rootNode, globalTransform);
 }
 void Model::Draw(Shader& shader, Camera& camera)
 {
-	// Go over all meshes and draw each one
-	for (unsigned int i = 0; i < meshes.size(); i++)
+	// Recorre todas las meshes y las dibuja
+	for (size_t i = 0; i < meshes.size(); ++i)
 	{
-		meshes[i].Mesh::Draw(shader, camera, matricesMeshes[i]);
+		auto& mesh = meshes[i]; // Quitamos el `const` para permitir modificar el collider
+		mesh.Draw(shader, camera, matricesMeshes[i], translationsMeshes[i], rotationsMeshes[i], scalesMeshes[i]);
 	}
 }
 
@@ -84,7 +84,7 @@ void Model::traverseNode(unsigned int nextNode, glm::mat4 matrix)
 	// Nodo actual
 	json node = JSON["nodes"][nextNode];
 
-	// Obtener traslación, rotación y escala si existen
+	// Obtener traslaciï¿½n, rotaciï¿½n y escala si existen
 	glm::vec3 translation = glm::vec3(0.0f, 0.0f, 0.0f);
 	if (node.find("translation") != node.end())
 	{
@@ -114,7 +114,7 @@ void Model::traverseNode(unsigned int nextNode, glm::mat4 matrix)
 		scale = glm::make_vec3(scaleValues);
 	}
 
-	// Si el nodo tiene una matriz, úsala. Si no, compónla con TRS.
+	// Si el nodo tiene una matriz, ï¿½sala. Si no, compï¿½nla con TRS.
 	glm::mat4 localMatrix = glm::mat4(1.0f);
 	if (node.find("matrix") != node.end())
 	{
@@ -134,7 +134,7 @@ void Model::traverseNode(unsigned int nextNode, glm::mat4 matrix)
 	// Multiplica por la matriz acumulada del padre
 	glm::mat4 matNextNode = matrix * localMatrix;
 
-	// Si el nodo contiene una malla, cárgala
+	// Si el nodo contiene una malla, cï¿½rgala
 	if (node.find("mesh") != node.end())
 	{
 		translationsMeshes.push_back(translation);

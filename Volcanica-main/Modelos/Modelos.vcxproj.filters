@@ -102,8 +102,8 @@
     <ClCompile Include="Skybox.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
-    <ClCompile Include="Terreno.cpp">
-      <Filter>scenes</Filter>
+    <ClCompile Include="Collider.cpp">
+      <Filter>Archivos de origen</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -182,8 +182,8 @@
     <ClInclude Include="Skybox.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
-    <ClInclude Include="Terreno.h">
-      <Filter>scenes</Filter>
+    <ClInclude Include="Collider.h">
+      <Filter>Archivos de encabezado</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

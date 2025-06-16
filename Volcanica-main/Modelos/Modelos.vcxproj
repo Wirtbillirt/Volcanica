@@ -159,12 +159,12 @@
     <ClCompile Include="..\imgui\imgui_widgets.cpp" />
     <ClCompile Include="AudioManager.cpp" />
     <ClCompile Include="Camara.cpp" />
+    <ClCompile Include="Collider.cpp" />
     <ClCompile Include="EBO.cpp" />
     <ClCompile Include="glad.c" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Mesh.cpp" />
     <ClCompile Include="Model.cpp" />
-    <ClCompile Include="Terreno.cpp" />
     <ClCompile Include="PantallaInicio.cpp" />
     <ClCompile Include="SeleccionVolcan.cpp" />
     <ClCompile Include="shaderClass.cpp" />
@@ -188,10 +188,10 @@
     <ClInclude Include="..\imgui\imstb_truetype.h" />
     <ClInclude Include="AudioManager.h" />
     <ClInclude Include="Camara.h" />
+    <ClInclude Include="Collider.h" />
     <ClInclude Include="EBO.h" />
     <ClInclude Include="Mesh.h" />
     <ClInclude Include="Model.h" />
-    <ClInclude Include="Terreno.h" />
     <ClInclude Include="PantallaInicio.h" />
     <ClInclude Include="scenes.h" />
     <ClInclude Include="SeleccionVolcan.h" />
