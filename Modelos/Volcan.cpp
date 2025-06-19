@@ -38,7 +38,7 @@ void Volcan::CargarModelo(int volcanSeleccionado)
 		rutaModelo = "models/volcan2/scene.gltf";
 		break;
 	case 3:
-		rutaModelo = "models/volcan3/scene.gltf";
+		rutaModelo = "models/volcan4/scene.gltf";
 		break;
 	default:
 		std::cerr << "Volcán no válido\n";
