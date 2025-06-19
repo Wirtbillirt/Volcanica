@@ -12,44 +12,44 @@
   EBO.cpp
   Main.cpp
   Mesh.cpp
-C:\Users\wirtb\source\repos\Volcanica\Modelos\Mesh.cpp(78,43): warning C4267: 'argument': conversion from 'size_t' to 'GLsizei', possible loss of data
+C:\Users\Moises\source\repos\Wirtbillirt\Volcanica\Modelos\Mesh.cpp(78,43): warning C4267: 'argumento': conversión de 'size_t' a 'GLsizei'; posible pérdida de datos
   Model.cpp
-C:\Users\wirtb\source\repos\Volcanica\Modelos\Model.cpp(302,91): warning C4267: 'argument': conversion from 'size_t' to 'GLuint', possible loss of data
-C:\Users\wirtb\source\repos\Volcanica\Modelos\Model.cpp(310,93): warning C4267: 'argument': conversion from 'size_t' to 'GLuint', possible loss of data
+C:\Users\Moises\source\repos\Wirtbillirt\Volcanica\Modelos\Model.cpp(302,91): warning C4267: 'argumento': conversión de 'size_t' a 'GLuint'; posible pérdida de datos
+C:\Users\Moises\source\repos\Wirtbillirt\Volcanica\Modelos\Model.cpp(310,93): warning C4267: 'argumento': conversión de 'size_t' a 'GLuint'; posible pérdida de datos
   PantallaInicio.cpp
   SeleccionVolcan.cpp
   shaderClass.cpp
   Skybox.cpp
   stb.cpp
-  Generating Code...
-  Compiling...
+  Generando código...
+  Compilando...
   Texture.cpp
   VAO.cpp
-C:\Users\wirtb\source\repos\Volcanica\Modelos\VAO.cpp(13,63): warning C4244: 'argument': conversion from 'GLsizeiptr' to 'GLsizei', possible loss of data
+C:\Users\Moises\source\repos\Wirtbillirt\Volcanica\Modelos\VAO.cpp(13,63): warning C4244: 'argumento': conversión de 'GLsizeiptr' a 'GLsizei'; posible pérdida de datos
   VBO.cpp
   Volcan.cpp
   WavLoader.cpp
-  Generating Code...
+  Generando código...
   glad.c
-glfw3.lib(init.obj) : warning LNK4099: PDB 'glfw3.pdb' was not found with 'glfw3.lib(init.obj)' or at 'C:\Users\wirtb\source\repos\Volcanica\x64\Debug\glfw3.pdb'; linking object as if no debug info
-glfw3.lib(monitor.obj) : warning LNK4099: PDB 'glfw3.pdb' was not found with 'glfw3.lib(monitor.obj)' or at 'C:\Users\wirtb\source\repos\Volcanica\x64\Debug\glfw3.pdb'; linking object as if no debug info
-glfw3.lib(window.obj) : warning LNK4099: PDB 'glfw3.pdb' was not found with 'glfw3.lib(window.obj)' or at 'C:\Users\wirtb\source\repos\Volcanica\x64\Debug\glfw3.pdb'; linking object as if no debug info
-glfw3.lib(input.obj) : warning LNK4099: PDB 'glfw3.pdb' was not found with 'glfw3.lib(input.obj)' or at 'C:\Users\wirtb\source\repos\Volcanica\x64\Debug\glfw3.pdb'; linking object as if no debug info
-glfw3.lib(win32_window.obj) : warning LNK4099: PDB 'glfw3.pdb' was not found with 'glfw3.lib(win32_window.obj)' or at 'C:\Users\wirtb\source\repos\Volcanica\x64\Debug\glfw3.pdb'; linking object as if no debug info
-glfw3.lib(context.obj) : warning LNK4099: PDB 'glfw3.pdb' was not found with 'glfw3.lib(context.obj)' or at 'C:\Users\wirtb\source\repos\Volcanica\x64\Debug\glfw3.pdb'; linking object as if no debug info
-glfw3.lib(win32_time.obj) : warning LNK4099: PDB 'glfw3.pdb' was not found with 'glfw3.lib(win32_time.obj)' or at 'C:\Users\wirtb\source\repos\Volcanica\x64\Debug\glfw3.pdb'; linking object as if no debug info
-glfw3.lib(win32_thread.obj) : warning LNK4099: PDB 'glfw3.pdb' was not found with 'glfw3.lib(win32_thread.obj)' or at 'C:\Users\wirtb\source\repos\Volcanica\x64\Debug\glfw3.pdb'; linking object as if no debug info
-glfw3.lib(platform.obj) : warning LNK4099: PDB 'glfw3.pdb' was not found with 'glfw3.lib(platform.obj)' or at 'C:\Users\wirtb\source\repos\Volcanica\x64\Debug\glfw3.pdb'; linking object as if no debug info
-glfw3.lib(vulkan.obj) : warning LNK4099: PDB 'glfw3.pdb' was not found with 'glfw3.lib(vulkan.obj)' or at 'C:\Users\wirtb\source\repos\Volcanica\x64\Debug\glfw3.pdb'; linking object as if no debug info
-glfw3.lib(win32_init.obj) : warning LNK4099: PDB 'glfw3.pdb' was not found with 'glfw3.lib(win32_init.obj)' or at 'C:\Users\wirtb\source\repos\Volcanica\x64\Debug\glfw3.pdb'; linking object as if no debug info
-glfw3.lib(win32_monitor.obj) : warning LNK4099: PDB 'glfw3.pdb' was not found with 'glfw3.lib(win32_monitor.obj)' or at 'C:\Users\wirtb\source\repos\Volcanica\x64\Debug\glfw3.pdb'; linking object as if no debug info
-glfw3.lib(wgl_context.obj) : warning LNK4099: PDB 'glfw3.pdb' was not found with 'glfw3.lib(wgl_context.obj)' or at 'C:\Users\wirtb\source\repos\Volcanica\x64\Debug\glfw3.pdb'; linking object as if no debug info
-glfw3.lib(egl_context.obj) : warning LNK4099: PDB 'glfw3.pdb' was not found with 'glfw3.lib(egl_context.obj)' or at 'C:\Users\wirtb\source\repos\Volcanica\x64\Debug\glfw3.pdb'; linking object as if no debug info
-glfw3.lib(osmesa_context.obj) : warning LNK4099: PDB 'glfw3.pdb' was not found with 'glfw3.lib(osmesa_context.obj)' or at 'C:\Users\wirtb\source\repos\Volcanica\x64\Debug\glfw3.pdb'; linking object as if no debug info
-glfw3.lib(null_init.obj) : warning LNK4099: PDB 'glfw3.pdb' was not found with 'glfw3.lib(null_init.obj)' or at 'C:\Users\wirtb\source\repos\Volcanica\x64\Debug\glfw3.pdb'; linking object as if no debug info
-glfw3.lib(win32_module.obj) : warning LNK4099: PDB 'glfw3.pdb' was not found with 'glfw3.lib(win32_module.obj)' or at 'C:\Users\wirtb\source\repos\Volcanica\x64\Debug\glfw3.pdb'; linking object as if no debug info
-glfw3.lib(win32_joystick.obj) : warning LNK4099: PDB 'glfw3.pdb' was not found with 'glfw3.lib(win32_joystick.obj)' or at 'C:\Users\wirtb\source\repos\Volcanica\x64\Debug\glfw3.pdb'; linking object as if no debug info
-glfw3.lib(null_monitor.obj) : warning LNK4099: PDB 'glfw3.pdb' was not found with 'glfw3.lib(null_monitor.obj)' or at 'C:\Users\wirtb\source\repos\Volcanica\x64\Debug\glfw3.pdb'; linking object as if no debug info
-glfw3.lib(null_window.obj) : warning LNK4099: PDB 'glfw3.pdb' was not found with 'glfw3.lib(null_window.obj)' or at 'C:\Users\wirtb\source\repos\Volcanica\x64\Debug\glfw3.pdb'; linking object as if no debug info
-glfw3.lib(null_joystick.obj) : warning LNK4099: PDB 'glfw3.pdb' was not found with 'glfw3.lib(null_joystick.obj)' or at 'C:\Users\wirtb\source\repos\Volcanica\x64\Debug\glfw3.pdb'; linking object as if no debug info
-  Modelos.vcxproj -> C:\Users\wirtb\source\repos\Volcanica\x64\Debug\Modelos.exe
+glfw3.lib(init.obj) : warning LNK4099: no se encontró PDB '' con 'glfw3.lib(init.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+glfw3.lib(monitor.obj) : warning LNK4099: no se encontró PDB '' con 'glfw3.lib(monitor.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+glfw3.lib(window.obj) : warning LNK4099: no se encontró PDB '' con 'glfw3.lib(window.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+glfw3.lib(input.obj) : warning LNK4099: no se encontró PDB '' con 'glfw3.lib(input.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+glfw3.lib(win32_window.obj) : warning LNK4099: no se encontró PDB '' con 'glfw3.lib(win32_window.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+glfw3.lib(context.obj) : warning LNK4099: no se encontró PDB '' con 'glfw3.lib(context.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+glfw3.lib(win32_time.obj) : warning LNK4099: no se encontró PDB '' con 'glfw3.lib(win32_time.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+glfw3.lib(win32_thread.obj) : warning LNK4099: no se encontró PDB '' con 'glfw3.lib(win32_thread.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+glfw3.lib(platform.obj) : warning LNK4099: no se encontró PDB '' con 'glfw3.lib(platform.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+glfw3.lib(vulkan.obj) : warning LNK4099: no se encontró PDB '' con 'glfw3.lib(vulkan.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+glfw3.lib(win32_init.obj) : warning LNK4099: no se encontró PDB '' con 'glfw3.lib(win32_init.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+glfw3.lib(win32_monitor.obj) : warning LNK4099: no se encontró PDB '' con 'glfw3.lib(win32_monitor.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+glfw3.lib(wgl_context.obj) : warning LNK4099: no se encontró PDB '' con 'glfw3.lib(wgl_context.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+glfw3.lib(egl_context.obj) : warning LNK4099: no se encontró PDB '' con 'glfw3.lib(egl_context.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+glfw3.lib(osmesa_context.obj) : warning LNK4099: no se encontró PDB '' con 'glfw3.lib(osmesa_context.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+glfw3.lib(null_init.obj) : warning LNK4099: no se encontró PDB '' con 'glfw3.lib(null_init.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+glfw3.lib(win32_module.obj) : warning LNK4099: no se encontró PDB '' con 'glfw3.lib(win32_module.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+glfw3.lib(win32_joystick.obj) : warning LNK4099: no se encontró PDB '' con 'glfw3.lib(win32_joystick.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+glfw3.lib(null_monitor.obj) : warning LNK4099: no se encontró PDB '' con 'glfw3.lib(null_monitor.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+glfw3.lib(null_window.obj) : warning LNK4099: no se encontró PDB '' con 'glfw3.lib(null_window.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+glfw3.lib(null_joystick.obj) : warning LNK4099: no se encontró PDB '' con 'glfw3.lib(null_joystick.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+  Modelos.vcxproj -> C:\Users\Moises\Source\Repos\Wirtbillirt\Volcanica\x64\Debug\Modelos.exe
