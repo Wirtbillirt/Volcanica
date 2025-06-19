@@ -196,6 +196,7 @@
     <ClInclude Include="scenes.h" />
     <ClInclude Include="SeleccionVolcan.h" />
     <ClInclude Include="shaderClass.h" />
+    <ClInclude Include="ShaderCollider.h" />
     <ClInclude Include="Skybox.h" />
     <ClInclude Include="stb_image.h" />
     <ClInclude Include="Texture.h" />
@@ -205,6 +206,8 @@
     <ClInclude Include="WavLoader.h" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="collider.frag" />
+    <None Include="collider.vert" />
     <None Include="default.frag" />
     <None Include="default.vert" />
     <None Include="light.frag" />

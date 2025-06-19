@@ -15,14 +15,14 @@ private:
 	int width, height;
 	Model* model = nullptr;
 	Model* modelExtra = nullptr;               // Modelo adicional para pruebas de colisión
-	glm::vec3 modeloExtraPos = glm::vec3(0.0f, 5.0f, 0.0f);  // posición para que no colisione con el principal
+	glm::vec3 modeloExtraPos = glm::vec3(0.0f, 0.0f, 0.0f);  // posición para que no colisione con el principal
 	glm::quat modeloExtraRotacion;
 
 	std::string rutaModelo;
 	Skybox skybox;
 	AudioManager audio;
 	
-
+	bool colisionDetectada = false;
 
 public:
 	Volcan(int width, int height);

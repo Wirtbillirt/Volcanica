@@ -185,6 +185,9 @@
     <ClInclude Include="Collider.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
+    <ClInclude Include="ShaderCollider.h">
+      <Filter>scenes</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="light.frag">
@@ -203,6 +206,12 @@
       <Filter>Archivos de recursos\Shaders</Filter>
     </None>
     <None Include="skybox.frag">
+      <Filter>Archivos de recursos\Shaders</Filter>
+    </None>
+    <None Include="collider.frag">
+      <Filter>Archivos de recursos\Shaders</Filter>
+    </None>
+    <None Include="collider.vert">
       <Filter>Archivos de recursos\Shaders</Filter>
     </None>
   </ItemGroup>

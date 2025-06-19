@@ -4,6 +4,9 @@
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
 #include <vector>
+#include "shaderClass.h"
+#include "Camara.h"
+
 
 class Collider {
 public:
@@ -12,6 +15,7 @@ public:
 
     void update(const glm::mat4& transform);
     bool intersects(const Collider& other) const;
+    void Draw(Shader& shader, Camera& camera);
 
     glm::vec3 getMin() const;
     glm::vec3 getMax() const;
