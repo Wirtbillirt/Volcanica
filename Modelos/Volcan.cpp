@@ -6,7 +6,7 @@ Volcan::Volcan(int width, int height)
 	: width(width), height(height)
 {
 	interfazSkybox.AgregarSkybox("skybox/");
-	interfazSkybox.AgregarSkybox("skybox1/");
+	interfazSkybox.AgregarSkybox("skybox2/");
 
 	modelosExtra.push_back(new Model("models/terreno/scene.gltf"));
 	posicionesModelosExtra.push_back(glm::vec3(0.0f, 0.0f, 0.0f));

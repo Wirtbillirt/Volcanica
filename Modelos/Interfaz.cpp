@@ -23,15 +23,16 @@ void Interfaz::SetSkybox(int index)
 
 void Interfaz::Dibujar(Camera& camara)
 {
-    ImGui::Begin("Dia - Noche");
+    ImGui::SetNextWindowPos(ImVec2(1100, 20), ImGuiCond_Always); 
+    ImGui::SetNextWindowSize(ImVec2(160, 55), ImGuiCond_Always); 
+    ImGui::Begin("Atardecer - Noche", nullptr, ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoMove);
 
-    if (ImGui::Button("Cambiar Skybox"))
+    if (ImGui::Button("Cambiar ciclo"))
     {
         indiceActual = (indiceActual + 1) % rutasSkyboxes.size();
         skybox.CambiarSkybox(indiceActual);
     }
 
-    ImGui::Text("Skybox actual: %d", indiceActual);
     ImGui::End();
 
     skybox.Dibujar(camara);
