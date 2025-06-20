@@ -118,8 +118,8 @@ This project has been successfully tested on systems with the following minimum 
 
 - **Processor**: Intel Core i5-8350U (8th Generation)  
 - **Memory**: 8 GB RAM  
-- **Storage**: 256 GB SSD  
-- **Display**: 14-inch screen with FHD resolution (1920x1080)  
+- **Storage**: 5 GB 
+- **Display**: 14-inch screen with FHD resolution (1366 x 768)  
 - **Graphics**: Intel UHD Integrated Graphics  
 - **Operating System**: Windows 10 Pro 64-bit  
 
@@ -129,7 +129,7 @@ For best performance, systems with dedicated GPUs (NVIDIA or AMD) are recommende
 
 ## 📄 License
 
-This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
+## 📄 License
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-You are free to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the software, under the condition that the original copyright and
-permission notice are included in all copies or substantial portions of the Software.
+Distributed under the MIT License. See [LICENSE](LICENSE) for details.
