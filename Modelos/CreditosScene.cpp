@@ -43,9 +43,9 @@ void CreditosScene::Dibujar() {
         "",
         "Oscar Moises Perez Delgado",
         "",
-        "Brandon Brandy Downs Hebberth.",
+        "Brandon Brandy Downs Hebberth",
         "",
-        "Angel Rafael Maltez Navarrete.",
+        "Angel Rafael Maltez Navarrete",
 
     };
 

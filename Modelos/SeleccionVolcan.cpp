@@ -37,7 +37,7 @@ void SeleccionVolcan::Dibujar()
     if (ImGui::Button("Paseo", buttonSize)) volcanSeleccionado = 1;
 
     ImGui::SetCursorPos(ImVec2(posX, startY + buttonSize.y + spacing));
-    if (ImGui::Button("Credito", buttonSize)) volcanSeleccionado = 2;
+    if (ImGui::Button("Creditos", buttonSize)) volcanSeleccionado = 2;
 
     ImGui::SetCursorPos(ImVec2(posX, startY + 2 * (buttonSize.y + spacing)));
     if (ImGui::Button("Salir", buttonSize)) volcanSeleccionado = 3;

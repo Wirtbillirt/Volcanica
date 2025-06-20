@@ -99,16 +99,16 @@ This is an OpenGL project developed using **Visual Studio 2022** on Windows. Fol
 ---
 
 > 📺 **Watch the demo video here:**  
-> [Insert YouTube Video Link]
+> [(https://youtu.be/4nacvnic8so)]
 
 ---
 
 ## 👤 Authors
 
 - **Br. Wilberth Alejandro Pérez Loredo**  
+- **Br. Oscar Moises Perez Delgado**
 - **Br. Ángel Rafael Maltez Navarrete**  
-- **Brandon Brandy Downs Hebberth**  
-- **Oscar Moises Perez Delgado**
+- **Br. Brandon Brandy Downs Hebberth**  
 
 ---
 

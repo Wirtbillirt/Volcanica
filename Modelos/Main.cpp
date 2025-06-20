@@ -104,10 +104,25 @@ int main()
 			break;
 
 		case Escena::VistaVolcan:
+		{
 			if (!ImGui::GetIO().WantCaptureMouse)
-				camera.Inputs(window);
+			{
+				static bool teclaPresionada = false;
+				if (glfwGetKey(window, GLFW_KEY_R) == GLFW_PRESS && !teclaPresionada)
+				{
+					camera.AlternarRestriccionMovimiento();
+					teclaPresionada = true;
+				}
+				if (glfwGetKey(window, GLFW_KEY_R) == GLFW_RELEASE)
+				{
+					teclaPresionada = false;
+				}
 
-			camera.updateMatrix(45.0f, 0.1f, 10000.0f);
+				camera.Inputs(window);
+			}
+
+			float fov = camera.EsModoRestringido() ? 45.0f : 60.0f;
+			camera.updateMatrix(fov, 0.1f, 10000.0f);
 			volcanScene.Dibujar(shaderProgram, camera);
 
 			ImGui::SetNextWindowPos(ImVec2(10, 10));
@@ -127,17 +142,43 @@ int main()
 				seleccionVolcan.volcanSeleccionado = 0;
 			}
 			ImGui::End();
-			break;
+			ImGui::SetNextWindowPos(ImVec2(10, 100)); 
+			ImGui::Begin("ModoCamara", nullptr,
+				ImGuiWindowFlags_NoTitleBar |
+				ImGuiWindowFlags_NoResize |
+				ImGuiWindowFlags_AlwaysAutoResize |
+				ImGuiWindowFlags_NoMove |
+				ImGuiWindowFlags_NoSavedSettings |
+				ImGuiWindowFlags_NoBackground |
+				ImGuiWindowFlags_NoInputs);
 
-		case Escena::Creditos:
+			ImGui::Text(camera.EsModoRestringido() ? "Modo caminata" : "Modo libre");
+
+			ImGui::SetNextWindowPos(ImVec2(10, 140));
+			ImGui::Begin("AyudaCamara", nullptr,
+				ImGuiWindowFlags_NoTitleBar |
+				ImGuiWindowFlags_NoResize |
+				ImGuiWindowFlags_AlwaysAutoResize |
+				ImGuiWindowFlags_NoMove |
+				ImGuiWindowFlags_NoSavedSettings |
+				ImGuiWindowFlags_NoBackground |
+				ImGuiWindowFlags_NoInputs);
+
+			ImGui::Text("Presiona R para cambiar de modo");
+			ImGui::End();
+			ImGui::End();
+			break;
+		}
+			case Escena::Creditos:
 			creditosScene.Dibujar();
-			if (creditosScene.regresarPresionado)
-			{
+				if (creditosScene.regresarPresionado)
+				{
 				creditosScene.regresarPresionado = false;
 				escenaActual = Escena::SeleccionVolcan;
 				seleccionVolcan.volcanSeleccionado = 0;
-			}
+				}
 			break;
+		break;
 		}
 
 		ImGui::Render();

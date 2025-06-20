@@ -1,5 +1,6 @@
 #include"Camara.h"
 int cursorState = GLFW_CURSOR_NORMAL;
+bool movimientoRestringido = false;
 
 
 Camera::Camera(int width, int height, glm::vec3 position)
@@ -7,6 +8,7 @@ Camera::Camera(int width, int height, glm::vec3 position)
 	Camera::width = width;
 	Camera::height = height;
 	Position = position;
+	posicionInicial = position;
 }
 
 void Camera::updateMatrix(float FOVdeg, float nearPlane, float farPlane)
@@ -32,45 +34,47 @@ void Camera::Matrix(Shader& shader, const char* uniform)
 
 
 
+
 void Camera::Inputs(GLFWwindow* window)
 {
-	// Handles key inputs
+	// Movimiento base: siempre permitido
 	if (glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS)
 	{
 		Position += speed * Orientation;
 	}
-	if (glfwGetKey(window, GLFW_KEY_A) == GLFW_PRESS)
-	{
-		Position += speed * -glm::normalize(glm::cross(Orientation, Up));
-	}
 	if (glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS)
 	{
-		Position += speed * -Orientation;
+		Position -= speed * Orientation;
+	}
+	if (glfwGetKey(window, GLFW_KEY_A) == GLFW_PRESS)
+	{
+		Position -= speed * glm::normalize(glm::cross(Orientation, Up));
 	}
 	if (glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS)
 	{
 		Position += speed * glm::normalize(glm::cross(Orientation, Up));
 	}
-	if (glfwGetKey(window, GLFW_KEY_SPACE) == GLFW_PRESS)
+
+	// Solo en modo libre puede volar (subir/bajar)
+	if (!movimientoRestringido)
 	{
-		Position += speed * Up;
+		if (glfwGetKey(window, GLFW_KEY_SPACE) == GLFW_PRESS)
+		{
+			Position += speed * Up;
+		}
+		if (glfwGetKey(window, GLFW_KEY_LEFT_CONTROL) == GLFW_PRESS)
+		{
+			Position -= speed * Up;
+		}
 	}
-	if (glfwGetKey(window, GLFW_KEY_LEFT_CONTROL) == GLFW_PRESS)
-	{
-		Position += speed * -Up;
-	}
+
+	// Ajuste de velocidad
 	if (glfwGetKey(window, GLFW_KEY_LEFT_SHIFT) == GLFW_PRESS)
-	{
 		speed = 0.04f;
-	}
-	else if (glfwGetKey(window, GLFW_KEY_LEFT_SHIFT) == GLFW_RELEASE)
-	{
+	else
 		speed = 0.01f;
-	}
 
-
-
-	// Handles mouse inputs
+	// Mouse siempre activo para rotar (sin importar el modo)
 	if (glfwGetMouseButton(window, GLFW_MOUSE_BUTTON_LEFT) == GLFW_PRESS)
 	{
 		if (cursorState != GLFW_CURSOR_HIDDEN)
@@ -108,5 +112,16 @@ void Camera::Inputs(GLFWwindow* window)
 			cursorState = GLFW_CURSOR_NORMAL;
 		}
 		firstClick = true;
+	}
+}
+
+void Camera::AlternarRestriccionMovimiento()
+{
+	movimientoRestringido = !movimientoRestringido;
+
+	if (movimientoRestringido)
+	{
+		// Volver a la posición inicial, pero un poco más cerca (por ejemplo, -1.5 en Z)
+		Position = posicionInicial + Orientation * 1.5f;
 	}
 }
