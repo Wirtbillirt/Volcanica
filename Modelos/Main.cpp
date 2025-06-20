@@ -1,17 +1,18 @@
 #include "scenes.h"
 #include "AudioManager.h"
+#include "CreditosScene.h"
 
 #include <imgui.h>
 #include <imgui_impl_glfw.h>
 #include <imgui_impl_opengl3.h>
-//---//
+
 const unsigned int width = 1366;
 const unsigned int height = 768;
 
 enum class Escena {
-	PantallaInicio,
 	SeleccionVolcan,
-	VistaVolcan
+	VistaVolcan,
+	Creditos
 };
 
 int main()
@@ -21,7 +22,7 @@ int main()
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
 	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
-	GLFWwindow* window = glfwCreateWindow(width, height, "First Screen", NULL, NULL);
+	GLFWwindow* window = glfwCreateWindow(width, height, "Volcanica", NULL, NULL);
 	if (window == NULL)
 	{
 		std::cout << "Failed to create GLFW window" << std::endl;
@@ -29,7 +30,12 @@ int main()
 		return -1;
 	}
 	glfwMakeContextCurrent(window);
-	gladLoadGL();
+
+	if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress)) {
+		std::cout << "Failed to initialize GLAD" << std::endl;
+		return -1;
+	}
+
 	glViewport(0, 0, width, height);
 
 	// Inicializar ImGui
@@ -54,9 +60,9 @@ int main()
 
 	Camera camera(width, height, glm::vec3(0.0f, 0.0f, 10.0f));
 
-	//PantallaInicio pantallaInicio(width, height);
 	SeleccionVolcan seleccionVolcan(width, height);
 	Volcan volcanScene(width, height);
+	CreditosScene creditosScene(width, height);
 	Escena escenaActual = Escena::SeleccionVolcan;
 
 	AudioManager audio;
@@ -74,22 +80,26 @@ int main()
 
 		switch (escenaActual)
 		{
-		/*case Escena::PantallaInicio:
-			pantallaInicio.Dibujar();
-			if (pantallaInicio.iniciarPresionado)
-				escenaActual = Escena::SeleccionVolcan;
-			break;*/
-
 		case Escena::SeleccionVolcan:
 			seleccionVolcan.Dibujar();
 			if (seleccionVolcan.volcanSeleccionado != 0)
 			{
-				// effect sound to button click
 				audio.setEffectVolume(0.5f);
 				audio.playSoundEffect("assets/effect/click.wav");
 
-				volcanScene.CargarModelo(seleccionVolcan.volcanSeleccionado);
-				escenaActual = Escena::VistaVolcan;
+				if (seleccionVolcan.volcanSeleccionado == 2)
+				{
+					escenaActual = Escena::Creditos;
+				}
+				else if (seleccionVolcan.volcanSeleccionado == 3)
+				{
+					glfwSetWindowShouldClose(window, GLFW_TRUE);
+				}
+				else
+				{
+					volcanScene.CargarModelo(seleccionVolcan.volcanSeleccionado);
+					escenaActual = Escena::VistaVolcan;
+				}
 			}
 			break;
 
@@ -110,7 +120,6 @@ int main()
 
 			if (ImGui::Button("Regresar"))
 			{
-				// effect sound to button click
 				audio.setEffectVolume(0.5f);
 				audio.playSoundEffect("assets/effect/click.wav");
 
@@ -118,6 +127,16 @@ int main()
 				seleccionVolcan.volcanSeleccionado = 0;
 			}
 			ImGui::End();
+			break;
+
+		case Escena::Creditos:
+			creditosScene.Dibujar();
+			if (creditosScene.regresarPresionado)
+			{
+				creditosScene.regresarPresionado = false;
+				escenaActual = Escena::SeleccionVolcan;
+				seleccionVolcan.volcanSeleccionado = 0;
+			}
 			break;
 		}
 

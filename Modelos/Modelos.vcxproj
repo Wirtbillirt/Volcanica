@@ -160,6 +160,7 @@
     <ClCompile Include="AudioManager.cpp" />
     <ClCompile Include="Camara.cpp" />
     <ClCompile Include="Collider.cpp" />
+    <ClCompile Include="CreditosScene.cpp" />
     <ClCompile Include="EBO.cpp" />
     <ClCompile Include="glad.c" />
     <ClCompile Include="Interfaz.cpp" />
@@ -190,6 +191,7 @@
     <ClInclude Include="AudioManager.h" />
     <ClInclude Include="Camara.h" />
     <ClInclude Include="Collider.h" />
+    <ClInclude Include="CreditosScene.h" />
     <ClInclude Include="EBO.h" />
     <ClInclude Include="Interfaz.h" />
     <ClInclude Include="librerias\include\json\json.h" />

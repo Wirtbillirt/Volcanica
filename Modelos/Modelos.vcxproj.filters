@@ -108,6 +108,9 @@
     <ClCompile Include="Interfaz.cpp">
       <Filter>scenes</Filter>
     </ClCompile>
+    <ClCompile Include="CreditosScene.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Mesh.h">
@@ -196,6 +199,9 @@
     </ClInclude>
     <ClInclude Include="Interfaz.h">
       <Filter>scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="CreditosScene.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
