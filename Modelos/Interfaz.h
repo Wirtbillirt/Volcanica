@@ -19,9 +19,9 @@ public:
     // Agrega una carpeta de skybox (debe contener right.jpg, left.jpg, etc.)
     void AgregarSkybox(const std::string& carpeta);
 
-    // Llama esta función dentro de la escena para mostrar el botón y dibujar el skybox
+    // Llama esta funciï¿½n dentro de la escena para mostrar el botï¿½n y dibujar el skybox
     void Dibujar(Camera& camara);
 
-    // Cambiar manualmente a un índice específico
+    // Cambiar manualmente a un ï¿½ndice especï¿½fico
     void SetSkybox(int index);
 };

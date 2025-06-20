@@ -5,22 +5,21 @@
 #include "Camara.h"
 #include "AudioManager.h"
 #include <string>
-#include "Skybox.h"
-#include <glm/glm.hpp> // Asegúrate de incluir esto
+#include <vector>
+#include <glm/glm.hpp>
 #include <glm/gtc/quaternion.hpp>
+#include "Skybox.h"
 #include "Interfaz.h"
-
-
 
 class Volcan
 {
 private:
 	int width, height;
-	Model* model = nullptr;
-	Model* modelExtra = nullptr;               // Modelo adicional para pruebas de colisión
-	glm::vec3 modeloExtraPos = glm::vec3(0.0f, 0.0f, 0.0f);  // posición para que no colisione con el principal
-	glm::quat modeloExtraRotacion;
-
+	Model* model = nullptr;                              // Modelo principal
+	std::vector<Model*> modelosExtra;                    // Modelos adicionales
+	std::vector<glm::vec3> posicionesModelosExtra;       // Posiciones de cada modelo extra
+	std::vector<glm::vec3> rotacionesModelosExtra;
+	std::vector<glm::vec3> escalasModelosExtra;
 	std::string rutaModelo;
 
 	AudioManager audio;
