@@ -1,36 +1,43 @@
 #include "Volcan.h"
-#include "ShaderCollider.h"
 #include <iostream>
 
+// Constructor: Initializes the volcano scene with skyboxes and models
 Volcan::Volcan(int width, int height)
 	: width(width), height(height)
 {
+	// Add skybox environments
 	interfazSkybox.AgregarSkybox("skybox/");
 	interfazSkybox.AgregarSkybox("skybox2/");
 
 	modelosExtra.push_back(new Model("models/terreno/scene.gltf"));
-	posicionesModelosExtra.push_back(glm::vec3(0.0f, 0.0f, 0.0f));
-	rotacionesModelosExtra.push_back(glm::vec3(0.0f)); // sin rotación
-	escalasModelosExtra.push_back(glm::vec3(5.0f));
+	posicionesModelosExtra.push_back(glm::vec3(0.0f, 0.0f, 0.0f));// Terrain at origin
+	rotacionesModelosExtra.push_back(glm::vec3(0.0f));   // No rotation
+	escalasModelosExtra.push_back(glm::vec3(5.0f)); // Scale up terrain
+
+
+	modelosExtra.push_back(new Model("models/volcan1/scene.gltf"));
+	posicionesModelosExtra.push_back(glm::vec3(-150.0f, -5.5f, 150.0f));
+	rotacionesModelosExtra.push_back(glm::vec3(-120.0f, 0.0f, -90.0f)); 
+	escalasModelosExtra.push_back(glm::vec3(200.0f));
 
 	modelosExtra.push_back(new Model("models/volcan2/scene.gltf"));
-	posicionesModelosExtra.push_back(glm::vec3(100.0f, -3.0f, -50.0f));
-	rotacionesModelosExtra.push_back(glm::vec3(0.0f, 0.0f, -90.0f)); // rotar sobre X
-	escalasModelosExtra.push_back(glm::vec3(20.0f));
+	posicionesModelosExtra.push_back(glm::vec3(130.0f, -19.0f, -150.0f));
+	rotacionesModelosExtra.push_back(glm::vec3(295.0f, 0.0f, -90.0f)); 
+	escalasModelosExtra.push_back(glm::vec3(85.0f));
 
 	modelosExtra.push_back(new Model("models/volcan3/scene.gltf"));
-	posicionesModelosExtra.push_back(glm::vec3(-100.0f, 0.0f, -5.0f));
-	rotacionesModelosExtra.push_back(glm::vec3(0.0f, 0.0f, -90.0f)); // rotar sobre X
-	escalasModelosExtra.push_back(glm::vec3(20.0f));
+	posicionesModelosExtra.push_back(glm::vec3(-140.0f, 7.0f, -150.0f));
+	rotacionesModelosExtra.push_back(glm::vec3(0.0f, 0.0f, -90.0f)); 
+	escalasModelosExtra.push_back(glm::vec3(85.0f));
 
 	modelosExtra.push_back(new Model("models/volcan4/scene.gltf"));
-	posicionesModelosExtra.push_back(glm::vec3(15.0f, 0.0f, 100.0f));
-	rotacionesModelosExtra.push_back(glm::vec3(0.0f, 0.0f, -90.0f)); // sin rotación
-	escalasModelosExtra.push_back(glm::vec3(20.0f));
+	posicionesModelosExtra.push_back(glm::vec3(150.0f, 8.5f, 80.0f));
+	rotacionesModelosExtra.push_back(glm::vec3(0.0f, 0.0f, -90.0f)); 
+	escalasModelosExtra.push_back(glm::vec3(85.0f));
 
-	std::cout << "Modelos extra cargados: " << modelosExtra.size() << std::endl;
 }
 
+// Destructor: Frees memory used by the model and extra models
 Volcan::~Volcan()
 {
 	if (model != nullptr)
@@ -38,6 +45,7 @@ Volcan::~Volcan()
 
 	for (auto* m : modelosExtra)
 		delete m;
+	// Clear all vectors
 	modelosExtra.clear();
 	posicionesModelosExtra.clear();
 }
@@ -52,34 +60,26 @@ void Volcan::CargarModelo(int volcanSeleccionado)
 
 	switch (volcanSeleccionado)
 	{
-	case 1:
-		rutaModelo = "models/volcan1/scene.gltf";
-		audio.playSoundEffect("assets/music/audio2.wav");
-		audio.setEffectVolume(0.5f);
-		break;
-	case 2:
-		rutaModelo = "models/volcan2/scene.gltf";
-		break;
-	case 3:
-		rutaModelo = "models/volcan4/scene.gltf";
+	case 99:
+		std::cout << "This is an irrelevant case that does nothing useful.\n";
 		break;
 	default:
-		std::cerr << "Volcán no válido\n";
+		std::cerr << "\n";
 		return;
 	}
-
+	// Load the selected model (currently no cases defined)
 	model = new Model(rutaModelo.c_str());
-	std::cout << "Modelo principal cargado: " << rutaModelo << std::endl;
 }
 
 void Volcan::Dibujar(Shader& shader, Camera& camara)
 {
+	// Draw skybox based on current selection
 	interfazSkybox.Dibujar(camara);
 
 	if (model)
 		model->Draw(shader, camara);
 
-	// Dibujar modelos extra con sus posiciones
+	// Loop through extra models and draw them with individual transforms
 	for (size_t i = 0; i < modelosExtra.size(); ++i)
 	{
 		Model* extra = modelosExtra[i];
@@ -87,12 +87,16 @@ void Volcan::Dibujar(Shader& shader, Camera& camara)
 		glm::vec3 rot = rotacionesModelosExtra[i];
 		glm::vec3 escala = escalasModelosExtra[i];
 
+		// Build rotation matrices for each axis
 		glm::mat4 rotX = glm::rotate(glm::mat4(1.0f), glm::radians(rot.x), glm::vec3(1, 0, 0));
 		glm::mat4 rotY = glm::rotate(glm::mat4(1.0f), glm::radians(rot.y), glm::vec3(0, 1, 0));
 		glm::mat4 rotZ = glm::rotate(glm::mat4(1.0f), glm::radians(rot.z), glm::vec3(0, 0, 1));
 		glm::mat4 rotation = rotZ * rotY * rotX;
 
+		// Create the full model matrix (translation * rotation * scale)
 		glm::mat4 modelMatrix = glm::translate(glm::mat4(1.0f), pos) * rotation * glm::scale(glm::mat4(1.0f), escala);
+
+		// Draw each mesh of the model using the transformed model matrix
 
 		auto& meshes = extra->GetMeshes();
 		for (size_t j = 0; j < meshes.size(); ++j)
@@ -102,42 +106,4 @@ void Volcan::Dibujar(Shader& shader, Camera& camara)
 	}
 
 
-
-	static ShaderCollider shaderCollider;
-
-	if (model)
-		for (auto& m : model->GetMeshes())
-			m.collider.Draw(shaderCollider, camara);
-
-	for (auto* extra : modelosExtra)
-		for (auto& m : extra->GetMeshes())
-			m.collider.Draw(shaderCollider, camara);
-
-	// Verificar colisiones entre el modelo principal y cada modelo extra
-	if (model && !colisionDetectada)
-	{
-		const auto& meshes1 = model->GetMeshes();
-
-		for (auto* extra : modelosExtra)
-		{
-			const auto& meshes2 = extra->GetMeshes();
-
-			for (const auto& m1 : meshes1)
-			{
-				for (const auto& m2 : meshes2)
-				{
-					if (m1.collider.intersects(m2.collider))
-					{
-						std::cout << "⚠️ ¡Colisión detectada entre modelos!\n";
-						colisionDetectada = true;
-						break;
-					}
-				}
-				if (colisionDetectada)
-					break;
-			}
-			if (colisionDetectada)
-				break;
-		}
-	}
 }
