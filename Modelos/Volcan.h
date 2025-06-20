@@ -8,6 +8,9 @@
 #include "Skybox.h"
 #include <glm/glm.hpp> // Asegúrate de incluir esto
 #include <glm/gtc/quaternion.hpp>
+#include "Interfaz.h"
+
+
 
 class Volcan
 {
@@ -19,9 +22,10 @@ private:
 	glm::quat modeloExtraRotacion;
 
 	std::string rutaModelo;
-	Skybox skybox;
+
 	AudioManager audio;
-	
+	Interfaz interfazSkybox;
+
 	bool colisionDetectada = false;
 
 public:

@@ -3,8 +3,15 @@
 #include <iostream>
 
 Volcan::Volcan(int width, int height)
-	: width(width), height(height), skybox("skybox/")
+	: width(width), height(height)
 {
+
+
+	interfazSkybox.AgregarSkybox("skybox/");
+	interfazSkybox.AgregarSkybox("skybox1/");
+
+
+
 	// Cargar modelo adicional para pruebas de colisión (solo una vez)
 	modelExtra = new Model("models/terreno/scene.gltf");
 	std::cout << "Modelo extra cargado\n";
@@ -52,7 +59,7 @@ void Volcan::CargarModelo(int volcanSeleccionado)
 void Volcan::Dibujar(Shader& shader, Camera& camara)
 {
 	// Skybox
-	skybox.Dibujar(camara);
+	interfazSkybox.Dibujar(camara);
 
 	// Modelo del volcán
 	if (model)

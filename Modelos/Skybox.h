@@ -11,12 +11,15 @@ class Skybox
 {
 private:
     unsigned int skyboxVAO, skyboxVBO, skyboxEBO;
-    unsigned int cubemapTexture;
+    std::vector<GLuint> cubemapTextures;
+    int skyboxActual = 0;    
     Shader skyboxShader;
 
 public:
-    Skybox(const std::string& directory);
+    Skybox(); // en lugar de usar el constructor con ruta
 
+    void CargarSkybox(const std::string& directory);
+    void CambiarSkybox(int index);
     void Dibujar(Camera& camara);
 
     ~Skybox();

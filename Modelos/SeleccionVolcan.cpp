@@ -1,6 +1,7 @@
 #include "SeleccionVolcan.h"
 #include <imgui.h>
 #include <iostream>
+#include "Interfaz.h"
 
 SeleccionVolcan::SeleccionVolcan(int width, int height)
 {

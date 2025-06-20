@@ -20,8 +20,31 @@ unsigned int skyboxIndices[] = {
     3, 7, 6, 6, 2, 3  // frente
 };
 
-Skybox::Skybox(const std::string& directory)
+Skybox::Skybox()
     : skyboxShader("skybox.vert", "skybox.frag")
+{
+    // Inicializar VAO y buffers
+    glGenVertexArrays(1, &skyboxVAO);
+    glGenBuffers(1, &skyboxVBO);
+    glGenBuffers(1, &skyboxEBO);
+
+    glBindVertexArray(skyboxVAO);
+
+    glBindBuffer(GL_ARRAY_BUFFER, skyboxVBO);
+    glBufferData(GL_ARRAY_BUFFER, sizeof(skyboxVertices), skyboxVertices, GL_STATIC_DRAW);
+
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, skyboxEBO);
+    glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(skyboxIndices), skyboxIndices, GL_STATIC_DRAW);
+
+    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
+    glEnableVertexAttribArray(0);
+
+    // Configurar shader
+    skyboxShader.Activate();
+    glUniform1i(glGetUniformLocation(skyboxShader.ID, "skybox"), 0);
+}
+
+void Skybox::CargarSkybox(const std::string& directory)
 {
     std::string faces[6] = {
         directory + "right.jpg",
@@ -32,21 +55,9 @@ Skybox::Skybox(const std::string& directory)
         directory + "back.jpg"
     };
 
-    // VAO y buffers
-    glGenVertexArrays(1, &skyboxVAO);
-    glGenBuffers(1, &skyboxVBO);
-    glGenBuffers(1, &skyboxEBO);
-    glBindVertexArray(skyboxVAO);
-    glBindBuffer(GL_ARRAY_BUFFER, skyboxVBO);
-    glBufferData(GL_ARRAY_BUFFER, sizeof(skyboxVertices), skyboxVertices, GL_STATIC_DRAW);
-    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, skyboxEBO);
-    glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(skyboxIndices), skyboxIndices, GL_STATIC_DRAW);
-    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
-    glEnableVertexAttribArray(0);
-
-    // Cubemap
-    glGenTextures(1, &cubemapTexture);
-    glBindTexture(GL_TEXTURE_CUBE_MAP, cubemapTexture);
+    GLuint textureID;
+    glGenTextures(1, &textureID);
+    glBindTexture(GL_TEXTURE_CUBE_MAP, textureID);
 
     for (unsigned int i = 0; i < 6; ++i)
     {
@@ -71,12 +82,20 @@ Skybox::Skybox(const std::string& directory)
     glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
     glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_WRAP_R, GL_CLAMP_TO_EDGE);
 
-    skyboxShader.Activate();
-    glUniform1i(glGetUniformLocation(skyboxShader.ID, "skybox"), 0);
+    cubemapTextures.push_back(textureID);
+}
+
+void Skybox::CambiarSkybox(int index)
+{
+    if (index >= 0 && index < cubemapTextures.size())
+        skyboxActual = index;
 }
 
 void Skybox::Dibujar(Camera& camara)
 {
+    if (cubemapTextures.empty())
+        return;
+
     glDepthFunc(GL_LEQUAL);
     skyboxShader.Activate();
 
@@ -88,7 +107,7 @@ void Skybox::Dibujar(Camera& camara)
 
     glBindVertexArray(skyboxVAO);
     glActiveTexture(GL_TEXTURE0);
-    glBindTexture(GL_TEXTURE_CUBE_MAP, cubemapTexture);
+    glBindTexture(GL_TEXTURE_CUBE_MAP, cubemapTextures[skyboxActual]);
     glDrawElements(GL_TRIANGLES, 36, GL_UNSIGNED_INT, 0);
     glBindVertexArray(0);
     glDepthFunc(GL_LESS);
@@ -99,6 +118,9 @@ Skybox::~Skybox()
     glDeleteVertexArrays(1, &skyboxVAO);
     glDeleteBuffers(1, &skyboxVBO);
     glDeleteBuffers(1, &skyboxEBO);
-    glDeleteTextures(1, &cubemapTexture);
+
+    for (GLuint texture : cubemapTextures)
+        glDeleteTextures(1, &texture);
+
     skyboxShader.Delete();
 }
