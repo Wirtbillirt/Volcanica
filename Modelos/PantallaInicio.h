@@ -1,5 +1,6 @@
 #ifndef PANTALLA_INICIO_H
 #define PANTALLA_INICIO_H
+#include "AudioManager.h"
 
 class PantallaInicio
 {
@@ -10,6 +11,7 @@ public:
     // Dimensiones de ventana
     int width;
     int height;
+    AudioManager audio;
 
     PantallaInicio(int width, int height);
 

@@ -84,6 +84,9 @@ int main()
 			seleccionVolcan.Dibujar();
 			if (seleccionVolcan.volcanSeleccionado != 0)
 			{
+				audio.setEffectVolume(0.5f);
+				audio.playSoundEffect("assets/effect/click.wav");
+				
 				volcanScene.CargarModelo(seleccionVolcan.volcanSeleccionado);
 				escenaActual = Escena::VistaVolcan;
 			}

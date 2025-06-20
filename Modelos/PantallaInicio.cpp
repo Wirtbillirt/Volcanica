@@ -1,4 +1,6 @@
 #include "PantallaInicio.h"
+#include "AudioManager.h"
+
 #include <imgui.h>
 #include <iostream>
 
@@ -35,8 +37,10 @@ void PantallaInicio::Dibujar()
     ImGui::SetCursorPos(buttonPos);
     if (ImGui::Button("Iniciar", buttonSize))
     {
+        audio.setEffectVolume(0.5f);
+		audio.playSoundEffect("assets/effect/click.wav");
         iniciarPresionado = true;
-        std::cout << "¡Botón Iniciar presionado!" << std::endl;
+        //std::cout << "¡Botón Iniciar presionado!" << std::endl;
     }
 
     ImGui::End();

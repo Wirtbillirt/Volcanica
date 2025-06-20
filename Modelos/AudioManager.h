@@ -17,7 +17,6 @@ public:
 
     bool playSoundEffect(const std::string& path);
     void setEffectVolume(float volume);
-
     void setVolume(float volume); // 0.0f = silencio, 1.0f = volumen normal, >1.0f amplifica
 
 private:
