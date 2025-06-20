@@ -36,7 +36,10 @@ void PantallaInicio::Dibujar()
     if (ImGui::Button("Iniciar", buttonSize))
     {
         iniciarPresionado = true;
-        std::cout << "¡Botón Iniciar presionado!" << std::endl;
+
+        audio.setEffectVolume(0.5f);
+        audio.playSoundEffect("assets/effect/click.wav");
+        //std::cout << "¡Botón Iniciar presionado!" << std::endl;
     }
 
     ImGui::End();

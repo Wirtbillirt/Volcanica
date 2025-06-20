@@ -54,10 +54,10 @@ int main()
 
 	Camera camera(width, height, glm::vec3(0.0f, 0.0f, 10.0f));
 
-	PantallaInicio pantallaInicio(width, height);
+	//PantallaInicio pantallaInicio(width, height);
 	SeleccionVolcan seleccionVolcan(width, height);
 	Volcan volcanScene(width, height);
-	Escena escenaActual = Escena::PantallaInicio;
+	Escena escenaActual = Escena::SeleccionVolcan;
 
 	AudioManager audio;
 	audio.playBackgroundMusic("assets/music/ambient.wav");
@@ -74,16 +74,20 @@ int main()
 
 		switch (escenaActual)
 		{
-		case Escena::PantallaInicio:
+		/*case Escena::PantallaInicio:
 			pantallaInicio.Dibujar();
 			if (pantallaInicio.iniciarPresionado)
 				escenaActual = Escena::SeleccionVolcan;
-			break;
+			break;*/
 
 		case Escena::SeleccionVolcan:
 			seleccionVolcan.Dibujar();
 			if (seleccionVolcan.volcanSeleccionado != 0)
 			{
+				// effect sound to button click
+				audio.setEffectVolume(0.5f);
+				audio.playSoundEffect("assets/effect/click.wav");
+
 				volcanScene.CargarModelo(seleccionVolcan.volcanSeleccionado);
 				escenaActual = Escena::VistaVolcan;
 			}
@@ -106,6 +110,10 @@ int main()
 
 			if (ImGui::Button("Regresar"))
 			{
+				// effect sound to button click
+				audio.setEffectVolume(0.5f);
+				audio.playSoundEffect("assets/effect/click.wav");
+
 				escenaActual = Escena::SeleccionVolcan;
 				seleccionVolcan.volcanSeleccionado = 0;
 			}
